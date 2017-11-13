@@ -113,23 +113,23 @@
         var $this = $(this),
           $text = $this.text();
 
-        if ($text.length < 5) {
+        if ($text.length < 10) {
           // xxl font size
           $this.addClass('font-size-xxl')
         }
-        if ($text.length < 10) {
+        if ($text.length < 20) {
           // xl font size
           $this.addClass('font-size-xl')
         }
-        else if ($text.length < 20) {
+        else if ($text.length < 30) {
           // lg font size
           $this.addClass('font-size-lg')
         }
-        else if ($text.length < 30) {
+        else if ($text.length < 60) {
           // medium font size
           $this.addClass('font-size-md')
         }
-        else if ($text.length < 40) {
+        else if ($text.length < 90) {
           // small font size
           $this.addClass('font-size-sm')
         }
@@ -141,28 +141,19 @@
     }
   };
 
-
-
   /**
-   * Implements the reset behavior of all buttons, e.g. de/activation of reset button
-   * according to the sort and filter button states.
-   *
-   * @type {{attach: Drupal.behaviors.activateResetButton.attach}}
+   * Allows full size clickable items (open node in full size).
    */
-  Drupal.behaviors.activateResetButton = {
+  Drupal.behaviors.fullSizeClickableItems = {
     attach: function () {
-      var $toggleFilterWrapper = $('#toggle-filters-wrapper'),
-        $categoryWrapper = $toggleFilterWrapper.find('#edit-field-category-tid-wrapper'),
-        $sortWrapper = $toggleFilterWrapper.find('.views-widget-sort-by'),
-        $resetCategoryLink = $categoryWrapper.find('.form-item-edit-field-category-tid-all > a'),
-        $resetSortLink = $sortWrapper.find('.form-item-edit-sort-by-created > a'),
-        $resetButton = $toggleFilterWrapper.find('.views-reset-button > button');
+      var $clickableItems = $('.view-post-grid .pe-item-no-ajax');
 
-      //
-      // de/activate reset button
-      if ($resetCategoryLink.hasClass('active') && $resetSortLink.hasClass('active')) {
-        $resetButton.addClass('active');
-      }
+      $clickableItems.once('click', function () {
+        $(this).on('click', function () {
+          window.location = $(this).find(".node-post .field-name-field-image a").attr("href");
+          return false;
+        });
+      });
     }
   };
 
