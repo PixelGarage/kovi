@@ -1,0 +1,183 @@
+/*
+ *  Login form component
+ *  (see inc/login.inc for login form alteration)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+//text
+@pxl-login-btn-color: #fff;
+@pxl-login-btn-hover-color: @pxl-color-main;
+@pxl-login-link-color: @link-hover-color;
+@pxl-login-link-hover-color: @link-color;
+
+@pxl-hr-color: @text-color;
+
+
+// Mixins
+// -------------------------
+
+
+
+// General form settings
+// -------------------------
+#user_register_form,
+#user_login_form,
+#user-create-account,
+#user_pass_form {
+  clear: both;
+  float: none;
+  width: auto;
+
+  input.form-control {
+    font-family: @pxl-text-font-light;
+    color: @text-color;
+    border: none;
+    border-bottom: 1px solid @pxl-color-border-active;
+    #pxl-mixins.border-radius(0);
+    background: none;
+    .box-shadow(none);
+
+    &:hover, &:focus {
+      border: 1px solid @pxl-color-border-active;
+      .box-shadow(0 0 3px @pxl-color-main inset);
+    }
+  }
+
+  .help-block {
+    color: @text-color;
+  }
+}
+
+/* User login page */
+form#user-login {
+  position: relative;
+  padding: 2em;
+  border: none;
+}
+
+/* account register form */
+#user-create-account {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 2em;
+  width: 100%;
+
+  @media @normal {
+    padding: 2em;
+    width: 50%;
+  }
+
+  .form-actions-wrapper {
+    position: relative;
+    padding: 1em 0 0;
+  }
+
+  .login-register {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    vertical-align: middle;
+    margin: 0;
+    #pxl-mixins.submit-button(@pxl-login-btn-color, @pxl-login-btn-hover-color);
+    #pxl-mixins.border-radius(0);
+    border: 2px solid @pxl-login-btn-hover-color;
+  }
+
+}
+
+/* user login form */
+#user_login_form {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 0 2em;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid @pxl-hr-color;
+
+  @media @normal {
+    padding: 2em;
+    width: 50%;
+    border: 0;
+    border-right: 1px solid @pxl-hr-color;
+  }
+
+  .form-actions-wrapper {
+    position: relative;
+    padding: 1em 0 0;
+
+    .form-actions {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      vertical-align: middle;
+      margin: 0;
+
+      .btn {
+        #pxl-mixins.submit-button(@pxl-login-btn-color, @pxl-login-btn-hover-color);
+        #pxl-mixins.border-radius(0);
+        border: 2px solid @pxl-login-btn-hover-color;
+      }
+    }
+
+    .login-password {
+      display: inline-block;
+      margin:  0.5em 0;
+      color: @pxl-login-link-color;
+
+      &:hover {
+        color: @pxl-login-link-hover-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+
+/* User register / password forms */
+#user-register-form,
+#user-pass {
+  display: inline-block;
+  max-width: 40em;
+  vertical-align: top;
+  margin: 1em 0;
+
+  .form-actions {
+    margin-top: 2em;
+
+    .back-to-login {
+      float: left;
+      margin: 0;
+
+      .login-account {
+        display: inline-block;
+        margin-top:  0.5em;
+        color: @pxl-login-link-color;
+      }
+
+      &:before {
+        display: inline;
+        font-family: "fontawesome";
+        content: '\f112';
+        color: @pxl-login-link-color;
+        text-align: center;
+        padding: 0.3em;
+      }
+
+      &:hover {
+        .login-account, &:before {
+          color: @pxl-login-link-hover-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .btn {
+      #pxl-mixins.submit-button(@pxl-login-btn-color, @pxl-login-btn-hover-color);
+      #pxl-mixins.border-radius(0);
+      border: 2px solid @pxl-login-btn-hover-color;
+      float: right;
+    }
+  }
+}
+

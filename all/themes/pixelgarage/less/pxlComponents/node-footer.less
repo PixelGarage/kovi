@@ -1,0 +1,240 @@
+/*
+ *  Footer node component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+.form-button() {
+  margin: 0;
+  padding: 3px 10px 0;
+  height: 24px;
+  font-family: @pxl-text-font-bold;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.5px;
+  text-transform: lowercase;
+  color: white;
+  outline: none;
+  #pxl-mixins.border-radius(0);
+  border: 2px solid @pxl-color-main;
+  background-color: @pxl-color-main;
+
+  &:hover {
+    color: @pxl-color-main;
+    background-color: white;
+  }
+
+  @media @narrow {
+    padding: 0 12px;
+    height: 28px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  @media @normal {
+    padding: 0 15px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+
+
+// General settings
+// -------------------------
+.node.node-footer {
+  min-height: 50px;
+
+  div.col-sm-12, .col-sm-6 {
+    position: static;
+
+    .field-name-title {
+      h2 {
+        font-family: @pxl-text-font-bold;
+        #pxl-mixins.font-size-responsive(@font-size-h2);
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        color: @text-color;
+      }
+    }
+
+    // image on the left
+    .field-name-body {
+      display: none;
+      width: 100%;
+
+      @media @tablet {
+        display: inline-block;
+      }
+
+      .field-item {
+        img {
+          margin: 0 auto;
+          padding: 30px 0;
+          width: auto !important;
+          height: auto !important;
+          max-height: 140px;
+
+          @media @normal {
+            padding: 40px 0;
+            max-height: 170px;
+          }
+        }
+      }
+    }
+
+    .field-name-follow-site {
+      display: inline-block;
+      #pxl-mixins.center-vertically(absolute);
+      left: 0;
+
+      @media @tablet {
+        display: block;
+        position: static;
+        transform: none;
+        margin-top: 30px;
+        text-align: right;
+      }
+      @media @normal {
+        margin-top: 40px;
+      }
+
+      .field-item {
+        // see block-social.less
+      }
+    }
+
+    .field-name-language-selector {
+      display: inline-block;
+      #pxl-mixins.center-vertically(absolute);
+      right: 0;
+
+      @media @tablet {
+        display: none;
+      }
+      // see block-language.less
+    }
+
+    .field-name-newsletter {
+      display: none;
+      margin-top: 30px;
+
+      .field-item {
+        text-align: right;
+        .block-title {
+          display: inline-block;
+          margin: 0 -2px;
+          vertical-align: middle;
+          width: 30%;
+          font-family: @pxl-text-font-bold;
+          font-size: 18px;
+          line-height: 18px;
+          color: @pxl-color-main;
+          text-align: right;
+        }
+
+        .webform-client-form {
+          display: inline-block;
+          margin: 0 -2px;
+          padding: 0;
+          vertical-align: middle;
+          width: 70%;
+
+          input.email {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            padding: 0 10px;
+            height: 24px;
+            width: 100%;
+            font-family: @pxl-text-font-light;
+            font-size: 12px;
+            line-height: 12px;
+            color: @pxl-color-active;
+            .placeholder(@text-color-placeholder);
+            #pxl-mixins.border-radius(0);
+            border: none;
+            border-bottom: 1px solid @pxl-color-main;
+            background-color: white;
+            #pxl-mixins.box-shadow(none);
+
+            &:focus {
+              border: 1px solid @pxl-color-main;
+              #pxl-mixins.box-shadow(0 0 2px @pxl-color-main inset);
+            }
+
+            @media @narrow {
+              height: 28px;
+              font-size: 15px;
+              line-height: 15px;
+            }
+            @media @normal {
+              height: 32px;
+              font-size: 18px;
+              line-height: 18px;
+            }
+          }
+
+          .clear {
+            display: inline-block;
+            margin: 0 -2px;
+            padding: 0;
+            vertical-align: top;
+
+            input {
+              .form-button;
+            }
+          }
+
+          //
+          // for webform newsletter
+          .webform-client-form {
+            margin: 0;
+          }
+          .webform-component-email {
+            margin: 0 3% 0 -2px;
+            padding: 0;
+            display: inline-block;
+            width: 75%;
+            background: @pxl-color-main none;
+          }
+          .form-actions {
+            display: inline-block;
+            margin: 0 -2px;
+            padding: 0;
+            vertical-align: top;
+            width: 20%;
+            background: @pxl-color-main none;
+
+            button.btn {
+              .form-button;
+              width: 100%;
+            }
+          }
+
+        }
+
+      }
+
+      @media @tablet {
+        display: block;
+        margin-top: 30px;
+        .field-item {
+          .block-title {
+            font-size: 18px;
+            line-height: 18px;
+          }
+        }
+      }
+      @media @normal {
+        margin-top: 40px;
+      }
+    }
+
+  }
+
+}

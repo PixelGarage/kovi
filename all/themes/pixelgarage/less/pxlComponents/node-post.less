@@ -1,0 +1,257 @@
+/*
+ *  Node post component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-text-color-back: #fff;
+@pxl-name-field-bg-color-left: @pxl-color-main;
+@pxl-name-field-bg-color-right: @pxl-color-main;
+@pxl-name-field-color: #fff;
+
+@start-text-area: (100%/1.4);
+
+
+// Mixins
+// -------------------------
+
+
+// General settings
+// -------------------------
+//
+// full mode wrappers implemented in template
+.node-post-page-wrapper {
+  margin: 50px 0;
+  width: 100%;
+
+  .node-post-header {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    .post-title {
+      margin-bottom: 10px;
+      font-family: @pxl-text-font-bold;
+      font-size: 30px;
+      color: @text-color;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .post-heading {
+      margin-bottom: 10px;
+      font-family: @pxl-text-font;
+      font-size: 17px;
+      color: @text-color;
+      line-height: 1.1;
+      text-align: center;
+    }
+
+    .social-buttons {
+      margin-bottom: 20px;
+      text-align: center;
+
+      .shariff {
+        display: inline-block;
+        .shariff();
+
+        ul.orientation-horizontal {
+          li.shariff-button {
+            width: 60px;
+            height: auto;
+          }
+
+
+        }
+      }
+    }
+
+  }
+
+  .node-post-wrapper {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+}
+
+
+//
+// Node Post
+.node.node-post {
+  position: relative;
+  margin: 0;
+  padding-bottom: 150%;
+  width: 100%;
+  height: 0;
+  //overflow: hidden;
+  background-color: white;
+
+  div.row {
+    margin: 0;
+
+    div.col-sm-12 {
+      position:static;
+      padding: 0;
+
+      .field-name-field-image {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .logo-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .field-name-field-profession,
+      .name-age-wrapper {
+        position: absolute;
+        padding: 0 10px;
+        max-width: 80%;
+        height: auto;
+        line-height: 1.2;
+
+        .field-item {
+          overflow: hidden;
+          font-family: @pxl-text-font;
+          color: white;
+          letter-spacing: 1px;
+          text-align: center;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+          @media @mobile {
+            font-size: 4.5vw;
+          }
+          @media @tablet {
+            font-size: 12px;
+          }
+          @media @normal {
+            font-size: 16px;
+          }
+          @media @wide {
+            font-size: 16px;
+          }
+        }
+
+      }
+
+      .name-age-wrapper {
+        padding-top: 3px;
+        top: 52%;
+        left: -2%;
+        background-color: @pxl-color-blue;
+
+        .field-name-field-your-name {
+          display: inline-block;
+
+          .field-item {
+            white-space: nowrap;
+            line-height: 1;
+          }
+        }
+
+        .field-name-field-age {
+          display: inline-block;
+          white-space: nowrap;
+
+          .field-items {
+            display: inline-block;
+
+            .field-item {
+              line-height: 1;
+
+              &:before {
+                content: ', ';
+              }
+
+            }
+          }
+        }
+      }
+
+      .field-name-field-profession {
+        top: 58%;
+        right: -2%;
+        background-color: @pxl-color-magenta;
+      }
+
+
+      .quote-wrapper {
+        position: absolute;
+        overflow: hidden;
+        top: 72%;
+        right: 0;
+        width: 47%;
+        height: auto;
+        font-family: @pxl-text-font-bold;
+        text-align: center;
+
+        @media @mobile {
+          font-size: 4.5vw;
+        }
+        @media @tablet {
+          font-size: 12px;
+        }
+        @media @normal {
+          font-size: 16px;
+        }
+        @media @wide {
+          font-size: 16px;
+        }
+
+        .field-name-field-quote {
+          display: inline;
+
+          .field-items {
+            display: inline;
+
+            .field-item {
+              display: inline;
+              color: @pxl-color-magenta;
+              line-height: 1.1;
+              text-align: left;
+              //#pxl-mixins.hyphenate(auto);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // Full mode post
+  //
+  &.view-mode-full {
+    div.row {
+      div.col-sm-12 {
+        .field-name-field-your-name,
+        .profession-age-wrapper {
+          .field-item {
+            @media @narrow {
+              font-size: 20px;
+            }
+          }
+        }
+
+        .quote-wrapper {
+          @media @narrow {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+

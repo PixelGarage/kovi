@@ -1,0 +1,36 @@
+/*
+ *  Footer section (page bottom)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-follow-site-width: 85px;
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+footer.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 20px 0 0;
+  padding: 0;
+  border: none;
+  background: white none;
+  z-index: @zindex-navbar;
+
+  @media @tablet {
+    position: absolute;
+  }
+
+  .container {
+    .region-footer{
+    }
+  }
+
+}

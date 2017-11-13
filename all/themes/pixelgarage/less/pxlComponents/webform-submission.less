@@ -1,0 +1,84 @@
+/*
+ *  Webform submission component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// Submission settings
+// -------------------------
+.webform-submission {
+  margin: 20px auto 100px;
+
+  .row {
+    .col-sm-12 {
+      width: 100%;
+
+      @media @narrow {
+        margin: 0 auto;
+        max-width: 600px;
+      }
+    }
+
+    .col-sm-6 {
+      > img {
+        margin: 20px auto 0;
+        width: 90%;
+        height: auto;
+      }
+    }
+  }
+
+}
+
+.submission-actions {
+  text-align: center;
+
+  >ul.webform-submission-actions {
+    display: inline-block;
+    float: none;
+    margin: 10px auto;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+
+    @media @narrow {
+      margin: 20px auto;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+
+      a {
+        padding: 5px 10px;
+        font-family: @pxl-text-font;
+        font-size: @font-size-base;
+        color: @pxl-color-main;
+        text-decoration: none;
+        border: 2px solid @pxl-color-main;
+        outline: none;
+        background: none;
+
+        &:hover, &:active {
+          color: @pxl-color-body-bg;
+          background: @pxl-color-main none;
+          outline: none;
+        }
+      }
+
+      &.resend {
+        // hide resend emails
+        display: none;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,72 @@
+/*
+ *  Node page component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node-page {
+  margin-bottom: 50px;
+
+  @media @narrow {
+    margin: 0 auto 50px;
+    width: 80%;
+  }
+  @media @tablet {
+    margin: 0 auto 50px;
+    width: 75%;
+  }
+  @media @normal {
+    margin: 0 auto 50px;
+    width: 70%;
+  }
+  @media @wide {
+    margin: 0 auto 50px;
+    width: 60%;
+  }
+
+  .row {
+    div.col-sm-12, .col-sm-6 {
+
+      .field-name-title {
+        h2 {
+          font-family: @pxl-text-font-bold;
+          #pxl-mixins.font-size-responsive(30px, 22px);
+          letter-spacing: normal;
+          text-transform: none;
+          color: @text-color;
+        }
+      }
+
+      .field-name-body {
+        #pxl-mixins.wysiwyg-body();
+
+        p {
+          font-family: @pxl-text-font-light;
+          margin-bottom: 30px;
+          line-height: 22px;
+        }
+
+        a {
+          font-family: @pxl-text-font-light;
+          color: @link-color;
+          text-decoration: underline;
+
+          &:focus, &:hover {
+            color: @link-hover-color;
+            text-decoration: none;
+          }
+        }
+
+      }
+    }
+  }
+}

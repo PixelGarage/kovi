@@ -1,0 +1,71 @@
+/*
+ *  Confirm form component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+.resp-submit-button(@color: white; @bg-color: @pxl-color-main; @radius: @border-radius-small) {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+  padding: 7px 27px;
+  font-family: @pxl-text-font-bold;
+  #pxl-mixins.font-size-responsive(27px, 20px);
+  line-height: 27px;
+  letter-spacing: 1.5px;
+  text-transform: capitalize;
+  color: @color;
+  outline: none;
+  #pxl-mixins.border-radius(@radius);
+  border: 2px solid @bg-color;
+  background-color: @bg-color;
+
+  &:hover, &:focus {
+    color: @bg-color;
+    background-color: @color;
+  }
+}
+
+
+
+
+// General settings
+// -------------------------
+form.confirmation {
+  div {
+    // confirmation message
+    margin: 30px auto 50px;
+    width: 90%;
+    font-family: @pxl-text-font;
+    #pxl-mixins.font-size-responsive(19px, 14px);
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: none;
+    color: @text-color;
+
+    @media @tablet {
+      width: 80%;
+    }
+    @media @tablet {
+      width: 70%;
+    }
+
+    .form-actions {
+      button#edit-actions-submit {
+        .resp-submit-button();
+        margin-right: 20px;
+      }
+
+      a#edit-actions-cancel {
+        .resp-submit-button(@text-color);
+        padding: 0;
+        border: none;
+        background: none;
+      }
+    }
+  }
+}

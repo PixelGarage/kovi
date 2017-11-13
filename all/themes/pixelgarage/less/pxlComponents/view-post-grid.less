@@ -1,0 +1,296 @@
+/*
+ *  Posting view component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@grid-gutter-dist: 2%;  // in %
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view-post-grid {
+  margin: 0 auto;
+  width: 100%;
+
+  .views-exposed-form {
+    display: inline-block;
+    padding: 0;
+    width: 100%;
+
+    .views-exposed-widgets {
+      position: relative;
+      margin: 0 auto;
+      padding: 10px 0;
+
+      @media @narrow {
+        padding: 15px 0;
+      }
+      @media @normal {
+        padding: 20px 0;
+      }
+
+      #search-filter-wrapper {
+        display: inline-block;
+        margin: 0 -4px 20px;
+        width: 100%;
+        text-align: center;
+
+        @media @special-break {
+          margin: 0 -4px;
+          width: 40%;
+          text-align: left;
+        }
+      }
+
+      #toggle-filters-wrapper {
+        display: none;
+        margin: 0 0 10px;
+        width:100%;
+        text-align: center;
+
+        @media @special-break {
+          margin: 0;
+          width: 60%;
+          text-align: right;
+        }
+      }
+      
+      .views-exposed-widget {
+        display: inline-block;
+        float: none;
+        padding: 0;
+        vertical-align: middle;
+        text-align: center;
+
+        &.views-widget-filter-combine {
+          > label {
+            display: none;
+          }
+
+          .views-widget {
+            .form-item {
+              input.form-text {
+                padding: 0 10px;
+                height: 24px;
+                max-width: 150px;
+                font-family: @pxl-text-font-light;
+                font-size: 12px;
+                line-height: 12px;
+                color: @text-color;
+                .placeholder(@text-color-placeholder);
+                #pxl-mixins.border-radius(0);
+                border: none;
+                border-bottom: 2px solid @pxl-color-main;
+                background: none;
+                #pxl-mixins.box-shadow(none);
+
+                &:focus {
+                  border: 1px solid @pxl-color-main;
+                  #pxl-mixins.box-shadow(0 0 2px @pxl-color-main inset);
+                }
+
+                @media @narrow {
+                  height: 28px;
+                  font-size: 14px;
+                  line-height: 14px;
+                }
+                @media @normal {
+                  height: 32px;
+                  font-size: 17px;
+                  line-height: 17px;
+                }
+              }
+            }
+          }
+        }
+
+        &.views-submit-button {
+          margin: 0 0 0 5px;
+          padding: 0;
+
+          button {
+            display: inline-block;
+            margin: 0;
+            padding: 0 10px;
+            height: 24px;
+            font-family: @pxl-text-font-bold;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 1.5px;
+            text-transform: lowercase;
+            color: @pxl-color-main;
+            outline: none;
+            #pxl-mixins.border-radius(0);
+            border: 2px solid @pxl-color-main;
+            background-color: @pxl-color-body-bg;
+
+            @media @narrow {
+              padding: 0 12px;
+              height: 28px;
+              font-size: 15px;
+              line-height: 15px;
+            }
+            @media @normal {
+              padding: 0 15px;
+              height: 32px;
+              font-size: 18px;
+              line-height: 18px;
+            }
+
+            &:hover {
+              color: @pxl-color-body-bg;
+              background-color: @pxl-color-main;
+            }
+          }
+        }
+
+        &.views-reset-button {
+          button.btn {
+            margin: 0;
+            padding: 0 0 0 10px;
+            width: 28px;
+            height: 28px;
+            text-indent: -9999px;
+            border: none;
+            background: url(../images/icon-x.png) no-repeat center center / contain;
+
+            &:hover, &.active {
+              #pxl-mixins.box-shadow(none);
+              background-image: url(../images/icon-x-hover.png);
+            }
+
+            @media @narrow {
+              width: 35px;
+              height: 35px;
+            }
+            @media @normal {
+              width: 43px;
+              height: 43px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .view-content {
+    padding: 20px 0;
+
+    > .pe-container {
+      width: 100%;
+
+      .grid-sizer, .pe-item {
+        width: 100%;
+      }
+
+      .gutter-sizer {
+        width: 0;
+      }
+
+      @media @narrow {
+        .grid-sizer, .pe-item {
+          width: (50% - @grid-gutter-dist/2);
+        }
+
+        .gutter-sizer {
+          width: @grid-gutter-dist;
+        }
+      }
+
+      @media @tablet {
+        .grid-sizer, .pe-item {
+          margin: 0 -2px 0 0;
+          width: (33.3333333% - 2*@grid-gutter-dist/3);
+        }
+      }
+
+      @media @wide {
+        .grid-sizer, .pe-item {
+          margin: 0 -2px 0 0;
+          width: (25% - 3*@grid-gutter-dist/4);
+        }
+      }
+
+      .pe-item {
+        display: block;
+        //overflow: hidden;
+        margin: 0 0 @grid-gutter-dist !important;
+        opacity: 1.0;
+        //#pxl-mixins.transition(opacity 1s);
+
+        &.shown {
+          opacity: 1.0;
+        }
+
+        &.pe-item-ajax, &.pe-item-no-ajax, &.pe-item-linked {
+          cursor: pointer;
+          // see nodes styling (posts, testimonials, SoMe etc.)
+        }
+      }
+
+      // modal dialog
+      .modal {
+        #pxl-mixins.modal();
+      }
+    }
+  }
+
+  //
+  // view pager
+  #pxl-mixins.view-pager(18px, @text-color, @text-color);
+
+  ul.pagination {
+    li {
+      &:hover, &:focus, &.active {
+        a, span {
+          font-family: @pxl-text-font-bold;
+          text-decoration: none;
+          font-size: 20px;
+          background: none;
+        }
+      }
+
+      &.pager-first,
+      &.pager-last,
+      &.prev, &.pager-previous,
+      &.next, &.pager-next {
+        &:hover, &:focus, &.active {
+          a, span {
+            font-family: @pxl-text-font;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // infinite scrolling pager
+  .pager.pager--infinite-scroll {
+    .pager__item {
+      a {
+        display: inline-block;
+        padding: 8px 20px 10px;
+        font-family: @pxl-text-font;
+        font-size: 16px;
+        line-height: 1;
+        color: @text-color;
+        #pxl-mixins.border-radius(3px);
+        border: 1px solid @text-color;
+        background-color: #fff;
+
+        &:hover, &.active {
+          color: #fff;
+          background-color: @text-color;
+        }
+      }
+    }
+  }
+}
+

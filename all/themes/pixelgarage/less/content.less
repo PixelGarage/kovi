@@ -1,0 +1,100 @@
+/*
+ *  Content section (main content)
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@header-media:  ~"screen and (min-width: 640px)";
+
+
+// Mixins
+// -------------------------
+
+
+
+// Main settings
+// -------------------------
+.container {
+  //
+  // sharpen fonts
+  #pxl-mixins.sharp-fonts();
+
+  //
+  // general link without outline
+  a {
+    outline: none;
+
+    &.active, &:hover, &:focus {
+      outline: none;
+    }
+  }
+}
+
+body {
+  background-color: @pxl-color-body-bg;
+
+  .main-container {
+    #page-header {
+      .region-header {
+        // block title
+        h2.block-title {
+          margin: 20px 0 10px;
+          font-family: @pxl-text-font;
+          font-size: @font-size-larger;
+        }
+
+      }
+    }
+
+    //
+    // Frames of: Page title, Messages, Admin tabs, Action links and Main content
+    .row {
+      section { // column(s)
+
+        h1.page-header {
+          margin: 20px 0 10px;
+          font-family: @pxl-title-font;
+          font-size: @font-size-h1;
+          border: none;
+        }
+
+        .breadcrumb {
+          display: none;
+        }
+
+        .messages {
+          margin-top: 20px;
+        }
+
+        ul.nav-tabs {
+          margin: 20px 0 5px;
+          li {
+            float: right;
+            a {
+              padding: 5px 10px;
+              font-family: @font-family-monospace;
+              font-size: @font-size-smaller;
+              border-radius: 0;
+            }
+          }
+        }
+
+        ul.action-links {
+          margin: 0;
+          li {
+            float: right;
+            a {
+              font-family: @font-family-monospace;
+              font-size: @font-size-smaller;
+            }
+          }
+        }
+
+        .region-content {
+          // see specific content
+        }
+
+      } // section
+    }  // row
+  }
+}
