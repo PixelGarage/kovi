@@ -49,7 +49,39 @@ function pixelgarage_preprocess_page(&$vars) {
     $variant = 'naked'; //variable_get('shariff_css', 'complete');
     libraries_load('shariff', $variant);
   }
+
+  //
+  // calculate the different counts
+  switch ($language->language) {
+    case 'de':
+    default:
+    $nationwide = 3474;
+    $locally = 3476;
+    break;
+    case 'fr':
+      $nationwide = 3475;
+      $locally = 3477;
+      break;
+    case 'en':
+      $nationwide = 3473;
+      $locally = 3470;
+      break;
+  }
+  $vars['secondary_nav'][3472]['#title'] .= _get_count('post');  // personally
+  $vars['secondary_nav'][$nationwide]['#title'] .= _get_count('organisation');  // nationwide
 }
+
+function _get_count($bundle) {
+  // get the published posts
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', $bundle)
+    ->propertyCondition('status', NODE_PUBLISHED);
+  $result = $query->count()->execute();
+
+  return $result ? ' (' . $result  . ')' : ' (0)';
+}
+
 
 /* =============================================================================
  *      Preprocess post nodes

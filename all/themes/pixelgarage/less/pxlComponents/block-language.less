@@ -21,6 +21,7 @@
 }
 
 ul.language-switcher-locale-url {
+  display: inline-block;
   #pxl-mixins.no-list-style;
 
   >li {
@@ -30,38 +31,25 @@ ul.language-switcher-locale-url {
 
     a.language-link {
       display: inline-block;
-      padding-right: 5px;
-      font-family: @pxl-text-font-bold;
+      padding: 0 5px;
+      font-family: @pxl-text-font;
       font-size: 18px;
-      line-height: 18px;
-      text-transform: uppercase;
+      line-height: 1;
+      text-transform: lowercase;
       text-decoration: none;
       color: white;
       outline: none;
       border: none;
-
-      &:after {
-        content: '/';
-        padding-left: 5px;
-        color: white;
-      }
+      border-right: 1px solid white;
 
       &.active, &:hover {
         color: @pxl-color-blue;
-      }
-
-      @media @tablet {
-        font-size: 18px;
-        line-height: 18px;
       }
     }
 
     &:last-child a.language-link {
       padding-right: 0;
-
-      &:after {
-        content: '';
-      }
+      border: none;
     }
 
     span.locale-untranslated {
