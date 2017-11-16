@@ -19,6 +19,13 @@ if(typeof(CKEDITOR) !== 'undefined') {
         }
       },
       {
+        name: 'Normal (div)',
+        element: 'div',
+        attributes: {
+          'class': 'pxl-normal'
+        }
+      },
+      {
         name: 'Title',
         element: 'p',
         attributes: {

@@ -5,13 +5,59 @@
 // Variables
 // -------------------------
 @pxl-font-size-mobile: 36px;
-@pxl-menu-secondary-margin-small: 30px;
-@pxl-menu-secondary-margin: 50px;
+@pxl-menu-secondary-margin-small: 15px;
+@pxl-menu-secondary-margin: 25px;
 @pxl-menu-secondary-shift-small: @pxl-menu-secondary-margin-small + 31px;
 @pxl-menu-secondary-shift: @pxl-menu-secondary-margin + 37px;
 
 // Mixins
 // -------------------------
+
+.call2action-menu(@color: @pxl-color-main) {
+  // call2action menu
+  ul.menu {
+    display: inline-block;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+    width: auto;
+    line-height: 1;
+
+    >li {
+      display: block;
+      float: none;
+      padding: 0;
+      line-height: 1;
+
+      >a, >span {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0 10px 2px;
+        font-family: @pxl-text-font;
+        font-size: 16px;
+        line-height: 1;
+        text-transform: lowercase;
+        color: @color;
+        outline: none;
+        #pxl-mixins.border-radius(0);
+        border: 1.5px solid @color;
+        background: none;
+
+        &:hover, &.active, &.checked {
+          color: @pxl-color-active;
+          border: 1.5px solid @pxl-color-active;
+        }
+
+        @media @tablet {
+          font-size: 18px;
+        }
+        @media @normal {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
 
 .menu-exposed-form() {
   display: inline-block;
@@ -202,50 +248,7 @@ header#navbar {
       .region-navigation {
         display: inline-block;
         #pxl-mixins.center-xy(absolute);
-
-        // call2action menu
-        ul.menu {
-          display: inline-block;
-          float: none;
-          margin: 0 auto;
-          padding: 0;
-          width: auto;
-          line-height: 1;
-
-          >li {
-            display: block;
-            float: none;
-            padding: 0;
-            line-height: 1;
-
-            >a, >span {
-              cursor: pointer;
-              display: inline-block;
-              padding: 0 10px 2px;
-              font-family: @pxl-text-font;
-              font-size: 16px;
-              line-height: 1;
-              text-transform: lowercase;
-              color: @pxl-color-main;
-              outline: none;
-              #pxl-mixins.border-radius(0);
-              border: 1.5px solid @pxl-color-main;
-              background: none;
-
-              &:hover, &.active, &.checked {
-                color: @pxl-color-active;
-                border: 1.5px solid @pxl-color-active;
-              }
-
-              @media @tablet {
-                font-size: 18px;
-              }
-              @media @normal {
-                font-size: 24px;
-              }
-            }
-          }
-        }
+        .call2action-menu();
       }
 
       .navbar-toggle {
@@ -270,6 +273,7 @@ header#navbar {
     // mobile collapse part
     .navbar-collapse {
       padding: 10px 0;
+      max-height: none;
       background: none;
 
       nav {
@@ -294,6 +298,7 @@ header#navbar {
             >a, >span {
               cursor: pointer;
               display: inline-block;
+              padding: 0;
               font-family: @pxl-text-font;
               font-size: @pxl-font-size-mobile;
               line-height: 1;

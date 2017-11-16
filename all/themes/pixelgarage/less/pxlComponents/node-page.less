@@ -13,60 +13,42 @@
 
 // General settings
 // -------------------------
-.node-page {
-  margin-bottom: 50px;
+.node.node-page.view-mode-full,
+.node.node-page.view-mode-default {
+  margin: 30px auto;
+  max-width: 800px;
 
-  @media @narrow {
-    margin: 0 auto 50px;
-    width: 80%;
-  }
-  @media @tablet {
-    margin: 0 auto 50px;
-    width: 75%;
-  }
-  @media @normal {
-    margin: 0 auto 50px;
-    width: 70%;
-  }
-  @media @wide {
-    margin: 0 auto 50px;
-    width: 60%;
-  }
+  >.row {
+    >div.col-sm-12 {
 
-  .row {
-    div.col-sm-12, .col-sm-6 {
-
-      .field-name-title {
+      >.field-name-title {
         h2 {
-          font-family: @pxl-text-font-bold;
-          #pxl-mixins.font-size-responsive(30px, 22px);
-          letter-spacing: normal;
-          text-transform: none;
-          color: @text-color;
+          #pxl-mixins.title();
         }
       }
 
-      .field-name-body {
+      >.field-name-body {
+        margin: 0 0 80px;
         #pxl-mixins.wysiwyg-body();
+      }
 
-        p {
-          font-family: @pxl-text-font-light;
-          margin-bottom: 30px;
-          line-height: 22px;
-        }
+      >.paragraphs-items {
+        >.field-name-field-paragraphs {
+          >.field-items {
+            >.field-item:not(:last-child) {
+              margin-bottom: @paragraph-margin-bottom;
 
-        a {
-          font-family: @pxl-text-font-light;
-          color: @link-color;
-          text-decoration: underline;
+              @media @tablet {
+                margin-bottom: @paragraph-margin-bottom-large;
+              }
 
-          &:focus, &:hover {
-            color: @link-hover-color;
-            text-decoration: none;
+
+              // see paragraph-item-... less files
+            }
           }
         }
-
       }
+
     }
   }
 }

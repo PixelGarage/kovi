@@ -25,14 +25,13 @@ function pixelgarage_preprocess_page(&$vars) {
 
   // replace logo with .svg
   //$vars['logo'] = str_replace('.jpg', '.svg', $vars['logo']);
-  $vars['title'] = '';
-
 
   //
   // define shariff buttons
+  global $language, $base_url;
+
   if ($vars['is_front']) {
-    global $language;
-    $url = 'http://zweimal-ja.ch/' . $language->language;
+    $url = 'https://kirchefuerkovi.ch/' . $language->language;
 
     $shariff_attrs = array(
       'data-services' => '["twitter","facebook","mail","whatsapp"]',

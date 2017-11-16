@@ -5,6 +5,8 @@
 // Variables
 // -------------------------
 @header-media:  ~"screen and (min-width: 640px)";
+@pxl-footer-height-small: 160px;
+@pxl-footer-height: 100px;
 
 
 // Mixins
@@ -20,7 +22,11 @@
   #pxl-mixins.sharp-fonts();
 
   //
-  // general link without outline
+  // SVG correction for IE
+  img[src*=".svg"] {
+    width: 100%;
+  }
+
   a {
     outline: none;
 
@@ -30,10 +36,23 @@
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  position: relative;
+  min-height: 100%;
   background-color: @pxl-color-body-bg;
 
   .main-container {
+    padding-bottom: @pxl-footer-height-small;
+    height: 100%;
+
+    @media @tablet {
+      padding-bottom: @pxl-footer-height;
+    }
+
     #page-header {
       .region-header {
         // block title
@@ -96,5 +115,22 @@ body {
 
       } // section
     }  // row
+  } // main-container
+
+  footer.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: @pxl-footer-height-small;
+    border: none;
+    background: @pxl-color-main none;
+
+    @media @tablet {
+      height: @pxl-footer-height;
+    }
   }
+
 }

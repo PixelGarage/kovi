@@ -146,14 +146,23 @@
    */
   Drupal.behaviors.fullSizeClickableItems = {
     attach: function () {
-      var $clickableItems = $('.view-post-grid .pe-item-no-ajax');
+      var $clickablePosts = $('.view-post-grid .pe-item-no-ajax'),
+        $clickableOrgas = $('.view-organisations .pe-item');
 
-      $clickableItems.once('click', function () {
+      $clickablePosts.once('click', function () {
         $(this).on('click', function () {
           window.location = $(this).find(".node-post .field-name-field-image a").attr("href");
           return false;
         });
       });
+      $clickableOrgas.once('click', function () {
+        $(this).on('click', function () {
+          var link = $(this).find(".node-organisation a").attr("href");
+          window.open(link, '_blank');
+          return false;
+        });
+      });
+
     }
   };
 

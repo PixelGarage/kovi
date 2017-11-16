@@ -5,7 +5,7 @@
 // Variables
 // -------------------------
 @pxl-offset-name: 8px;
-@full-max-width: 500px;
+@full-max-width: 350px;
 @full-node-break: ~"screen and (min-width: @{full-max-width})";
 
 
@@ -30,7 +30,7 @@
 }
 
 .resp-font-size-full(@font-size) {
-  font-size: unit(@font-size*2/12.8, vw);
+  font-size: unit(@font-size*3.5/12.8, vw);
 
   @media @full-node-break {
     font-size: @font-size;
@@ -48,7 +48,7 @@
 
   .node-post-header {
     width: 100%;
-    max-width: 500px;
+    max-width: @full-max-width;
     margin: 0 auto;
 
     .post-title {
@@ -92,7 +92,7 @@
 
   .node-post-wrapper {
     width: 100%;
-    max-width: 500px;
+    max-width: @full-max-width;
     margin: 0 auto;
   }
 
@@ -147,6 +147,7 @@
             font-size: 15px;
             color: @pxl-color-black;
             white-space: nowrap;
+            text-transform: uppercase;
             line-height: 1;
           }
         }
@@ -217,7 +218,7 @@
           padding: 0 5%;
           font-family: @pxl-text-font;
           font-size: 15px;
-          text-align: center;
+          text-align: left;
           color: @pxl-color-orange;
         }
       }
@@ -233,7 +234,7 @@
         .image-wrapper {
           .field-name-field-your-name {
             .field-item {
-              .resp-font-size-full(25px);
+              .resp-font-size-full(20px);
             }
           }
         }
@@ -243,29 +244,29 @@
             .field-items {
               .field-item {
                 &.font-size-xs { // greater 90 letters
-                  .resp-font-size-full(34px);
+                  .resp-font-size-full(25px);
                 }
                 &.font-size-sm { // up to 90 letters
-                  .resp-font-size-full(40px);
+                  .resp-font-size-full(28px);
                 }
                 &.font-size-md { // up to 60 letters
-                  .resp-font-size-full(48px);
+                  .resp-font-size-full(32px);
                 }
                 &.font-size-lg { // up to 30 letters
-                  .resp-font-size-full(60px);
+                  .resp-font-size-full(40px);
                 }
                 &.font-size-xl { // up to 20 letters
-                  .resp-font-size-full(72px);
+                  .resp-font-size-full(54px);
                 }
                 &.font-size-xxl { // up to 10 letters
-                  .resp-font-size-full(96px);
+                  .resp-font-size-full(64px);
                 }
               }
             }
           }
 
           .field-funktion-ort {
-            .resp-font-size-full(25px);
+            .resp-font-size-full(20px);
           }
         }
       }
