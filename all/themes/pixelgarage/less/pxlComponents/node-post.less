@@ -139,11 +139,11 @@
           top: -@pxl-offset-name;
           left: -@pxl-offset-name;
           padding: 5px;
-          border: 1.5px solid @pxl-color-orange;
+          border: 1.5px solid @pxl-color-secondary;
           background: white;
 
           .field-item {
-            font-family: @pxl-text-font;
+            font-family: @pxl-text-font-medium;
             font-size: 15px;
             color: @pxl-color-black;
             white-space: nowrap;
@@ -160,7 +160,7 @@
         width: 100%;
         height: 0;
         //overflow: hidden;
-        background-color: @pxl-color-yellow;
+        background-color: @pxl-color-main;
 
         .field-name-field-quote {
           position: absolute;
@@ -186,7 +186,7 @@
                 .resp-font-size(21px);
               }
               &.font-size-md { // up to 60 letters
-                .resp-font-size(26px);
+                .resp-font-size(24px);
               }
               &.font-size-lg { // up to 30 letters
                 .resp-font-size(30px);
@@ -195,16 +195,16 @@
                 .resp-font-size(36px);
               }
               &.font-size-xxl { // up to 10 letters
-                .resp-font-size(48px);
+                .resp-font-size(44px);
               }
 
               &:before {
                 content: '«';
-                color: @pxl-color-orange;
+                color: @pxl-color-secondary;
               }
               &:after {
                 content: '»';
-                color: @pxl-color-orange;
+                color: @pxl-color-secondary;
               }
             }
           }
@@ -217,9 +217,9 @@
           right: 0;
           padding: 0 5%;
           font-family: @pxl-text-font;
-          font-size: 15px;
+          .resp-font-size(15px);
           text-align: left;
-          color: @pxl-color-orange;
+          color: @pxl-color-secondary;
         }
       }
     }
@@ -244,22 +244,22 @@
             .field-items {
               .field-item {
                 &.font-size-xs { // greater 90 letters
-                  .resp-font-size-full(25px);
+                  .resp-font-size-full(24px);
                 }
                 &.font-size-sm { // up to 90 letters
-                  .resp-font-size-full(28px);
+                  .resp-font-size-full(27px);
                 }
                 &.font-size-md { // up to 60 letters
-                  .resp-font-size-full(32px);
+                  .resp-font-size-full(30px);
                 }
                 &.font-size-lg { // up to 30 letters
-                  .resp-font-size-full(40px);
+                  .resp-font-size-full(38px);
                 }
                 &.font-size-xl { // up to 20 letters
-                  .resp-font-size-full(54px);
+                  .resp-font-size-full(50px);
                 }
                 &.font-size-xxl { // up to 10 letters
-                  .resp-font-size-full(64px);
+                  .resp-font-size-full(62px);
                 }
               }
             }

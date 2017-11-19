@@ -2348,26 +2348,26 @@
   clip: auto;
 }
 @font-face {
-  font-family: 'ProximaNovaLight';
-  src: url('../fonts/ProximaNovaLight/ProximaNovaLight.eot');
-  src: url('../fonts/ProximaNovaLight/ProximaNovaLight.eot') format('embedded-opentype'), url('../fonts/ProximaNovaLight/ProximaNovaLight.woff2') format('woff2'), url('../fonts/ProximaNovaLight/ProximaNovaLight.woff') format('woff'), url('../fonts/ProximaNovaLight/ProximaNovaLight.ttf') format('truetype'), url('../fonts/ProximaNovaLight/ProximaNovaLight.svg#ProximaNovaLight') format('svg');
+  font-family: 'OpenSansRegular';
+  src: url('../fonts/OpenSansRegular/OpenSansRegular.eot');
+  src: url('../fonts/OpenSansRegular/OpenSansRegular.eot') format('embedded-opentype'), url('../fonts/OpenSansRegular/OpenSansRegular.woff2') format('woff2'), url('../fonts/OpenSansRegular/OpenSansRegular.woff') format('woff'), url('../fonts/OpenSansRegular/OpenSansRegular.ttf') format('truetype'), url('../fonts/OpenSansRegular/OpenSansRegular.svg#OpenSansRegular') format('svg');
 }
 @font-face {
-  font-family: 'ProximaNovaRegular';
-  src: url('../fonts/ProximaNovaRegular/ProximaNovaRegular.eot');
-  src: url('../fonts/ProximaNovaRegular/ProximaNovaRegular.eot') format('embedded-opentype'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.woff2') format('woff2'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.woff') format('woff'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf') format('truetype'), url('../fonts/ProximaNovaRegular/ProximaNovaRegular.svg#ProximaNovaRegular') format('svg');
+  font-family: 'OpenSansBold';
+  src: url('../fonts/OpenSansBold/OpenSansBold.eot');
+  src: url('../fonts/OpenSansBold/OpenSansBold.eot') format('embedded-opentype'), url('../fonts/OpenSansBold/OpenSansBold.woff2') format('woff2'), url('../fonts/OpenSansBold/OpenSansBold.woff') format('woff'), url('../fonts/OpenSansBold/OpenSansBold.ttf') format('truetype'), url('../fonts/OpenSansBold/OpenSansBold.svg#OpenSansBold') format('svg');
 }
 @font-face {
-  font-family: 'ProximaNovaBold';
-  src: url('../fonts/ProximaNovaBold/ProximaNovaBold.eot');
-  src: url('../fonts/ProximaNovaBold/ProximaNovaBold.eot') format('embedded-opentype'), url('../fonts/ProximaNovaBold/ProximaNovaBold.woff2') format('woff2'), url('../fonts/ProximaNovaBold/ProximaNovaBold.woff') format('woff'), url('../fonts/ProximaNovaBold/ProximaNovaBold.ttf') format('truetype'), url('../fonts/ProximaNovaBold/ProximaNovaBold.svg#ProximaNovaBold') format('svg');
+  font-family: 'OpenSansSemibold';
+  src: url('../fonts/OpenSansSemibold/OpenSansSemibold.eot');
+  src: url('../fonts/OpenSansSemibold/OpenSansSemibold.eot') format('embedded-opentype'), url('../fonts/OpenSansSemibold/OpenSansSemibold.woff2') format('woff2'), url('../fonts/OpenSansSemibold/OpenSansSemibold.woff') format('woff'), url('../fonts/OpenSansSemibold/OpenSansSemibold.ttf') format('truetype'), url('../fonts/OpenSansSemibold/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
 }
 /*
  *  Text mixins
  * --------------------------------------------------*/
 .pxl-title {
   margin: 20px auto;
-  font-family: 'ProximaNovaBold';
+  font-family: 'OpenSansBold';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -2390,7 +2390,7 @@
   }
 }
 .pxl-subtitle {
-  font-family: 'ProximaNovaBold';
+  font-family: 'OpenSansSemibold';
   font-size: 18px;
   letter-spacing: 0;
   line-height: 1.14em;
@@ -2413,7 +2413,7 @@
   }
 }
 .pxl-normal {
-  font-family: 'ProximaNovaRegular', sans-serif;
+  font-family: 'OpenSansRegular', sans-serif;
   font-size: 15px;
   letter-spacing: 0;
   line-height: 1.14em;
@@ -2436,7 +2436,7 @@
   }
 }
 .pxl-subtext {
-  font-family: 'ProximaNovaRegular', sans-serif;
+  font-family: 'OpenSansRegular', sans-serif;
   font-size: 12px;
   letter-spacing: 0;
   line-height: 1.1667em;
@@ -2463,7 +2463,7 @@
   }
 }
 .pxl-quote {
-  font-family: 'ProximaNovaBold';
+  font-family: 'OpenSansBold';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;

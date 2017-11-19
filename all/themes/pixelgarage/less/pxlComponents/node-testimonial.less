@@ -1,0 +1,62 @@
+/*
+ *  Node testimonial component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.node.node-testimonial.view-mode-teaser {
+  overflow: hidden;
+  margin: 0;
+  padding-bottom: 166.6666666%;
+  width: 100%;
+  height: 0;
+  background-color: @pxl-color-secondary;
+
+  >.row {
+    >div.col-sm-12 {
+      margin-top: 40px;
+
+      >.field-name-title {
+        h2 {
+          #pxl-mixins.title();
+        }
+      }
+
+      >.field-name-body {
+        padding: 20px;
+
+        .field-item {
+          #pxl-mixins.wysiwyg-body();
+
+          p, strong, b, a, pre, address, i, em, u, mark, small {
+            //#pxl-mixins.hyphenate();
+            #pxl-mixins.subtitle();
+            .resp-font-size(30px);
+            text-transform: lowercase;
+          }
+          a {
+            color: white;
+          }
+
+          &:after {
+            content: '#KoVI';
+            #pxl-mixins.subtitle();
+            .resp-font-size(30px);
+            color: #fff;
+          }
+        }
+      }
+
+    }
+  }
+
+}

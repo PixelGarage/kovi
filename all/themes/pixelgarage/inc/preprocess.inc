@@ -83,6 +83,57 @@ function _get_count($bundle) {
 
 
 /* =============================================================================
+ *      Front Masonry
+ * ========================================================================== */
+/**
+ * Adapts the proximity view, so that always two randomly chosen testimonials are visible
+ * in the masonry.
+ */
+function pixelgarage_preprocess_views_view_proximity (&$vars) {
+  $view = $vars['view'];
+  if ($view->name != 'post_grid') return;
+
+  // add testimonials for the post masonry
+  $vars['testimonials'] = _random_nodes_of_bundle('testimonial');
+
+  // add important person at specific position
+  $vars['important_posts'] = _random_nodes_of_bundle('post');
+
+}
+
+function _random_nodes_of_bundle($bundle) {
+  $result = FALSE;
+  if ($bundle == 'testimonial') {
+    // get the published testimonials
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', $bundle)
+      ->propertyCondition('status', NODE_PUBLISHED);
+    $result = $query->execute();
+  }
+  else if ($bundle == 'post') {
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', $bundle)
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->fieldCondition('field_important', 'value', '1');
+    $result = $query->execute();
+  }
+  if ($result && !empty($result['node'])) {
+    $nodes = node_load_multiple(array_keys($result['node']));
+  }
+  else return array();
+
+  // return a random node list
+  $rand_key = array_rand($nodes, 1);
+  $pos = ($bundle == 'testimonial') ? 5 : 1;
+  return array(
+    $pos => array($rand_key => node_view($nodes[$rand_key], 'teaser'))
+  );
+}
+
+
+/* =============================================================================
  *      Preprocess post nodes
  * ========================================================================== */
 
@@ -123,10 +174,10 @@ function _preprocess_node_post(&$vars, $view_mode) {
   switch ($language->language) {
     case 'de':
     default:
-      $vars['icon_path'] = file_create_url($img_path . 'quote_image.png');
+      $vars['icon_path'] = file_create_url($img_path . 'kfK_KOVIweil.png');
       break;
     case 'fr':
-      $vars['icon_path'] = file_create_url($img_path . 'quote_image.png');
+      $vars['icon_path'] = file_create_url($img_path . 'kfK_KOVIweil.png');
       break;
   }
 
