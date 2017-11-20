@@ -10206,7 +10206,7 @@ body.front .shariff ul li a {
 }
 body.front .shariff ul li a:hover,
 body.front .shariff ul li a:focus {
-  color: white;
+  color: #ffb119;
 }
 body.front .shariff ul li a span.fa {
   display: inline-block;
@@ -10311,7 +10311,7 @@ body.front.desktop .shariff ul li.shariff-button.whatsapp {
 }
 .node-post-page-wrapper .node-post-header .social-buttons .shariff ul li a:hover,
 .node-post-page-wrapper .node-post-header .social-buttons .shariff ul li a:focus {
-  color: white;
+  color: #ffb119;
 }
 .node-post-page-wrapper .node-post-header .social-buttons .shariff ul li a span.fa {
   display: inline-block;
@@ -12065,6 +12065,10 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item a {
   color: white;
+}
+.node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item strong,
+.node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item b {
+  font-family: 'OpenSansBold', sans-serif;
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item:after {
   content: '#KoVI';
@@ -15252,12 +15256,14 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text {
     max-width: 120px;
     font-size: 18px;
+    height: 21px;
   }
 }
 @media screen and (min-width: 64em) {
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text {
     max-width: 160px;
     font-size: 24px;
+    height: 27px;
   }
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-submit-button button.btn {

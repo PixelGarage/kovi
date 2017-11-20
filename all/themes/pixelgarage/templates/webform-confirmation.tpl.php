@@ -28,22 +28,11 @@ $post_nid = _webform_submission_value($master, 'post_nid', $submission);
 $post = node_load($post_nid);
 $rendered_post = node_view($post);
 
-$title = t('Thank you');
-
-switch ($master->nid) {
-  case 18:
-    $message = t('for your participation for a !');
-    break;
-  default:
-    $message = $confirmation_message;
-    break;
-}
-
 $url = '/';
 ?>
-
-<div class="rendered-node"><?php print render($rendered_post); ?></div>
 
 <div class="links">
   <a href="<?php print $url; ?>"><?php print t('Go back to home') ?></a>
 </div>
+<div class="rendered-node"><?php print render($rendered_post); ?></div>
+
