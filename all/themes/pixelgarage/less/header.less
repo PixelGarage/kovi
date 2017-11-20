@@ -13,7 +13,7 @@
 // Mixins
 // -------------------------
 
-.call2action-menu(@color: @pxl-color-main) {
+.call2action-menu(@color: @pxl-color-main, @color-hover: @pxl-color-active) {
   // call2action menu
   ul.menu {
     display: inline-block;
@@ -44,8 +44,8 @@
         background: none;
 
         &:hover, &.active, &.checked {
-          color: @pxl-color-active;
-          border: 1.5px solid @pxl-color-active;
+          color: @color-hover;
+          border: 1.5px solid @color-hover;
         }
 
         @media @tablet {
@@ -359,11 +359,14 @@ header#navbar {
                 padding: 5px 10px;
                 font-family: @pxl-text-font;
                 font-size: 18px;
+                letter-spacing: 0.017em;
                 background: @pxl-color-gray-light none;
                 border: 1.5px solid white;
 
                 &:hover, &.active, &.checked {
-                  color: @pxl-color-secondary;
+                  font-family: @pxl-text-font-medium;
+                  color: @pxl-color-main;
+                  letter-spacing: normal;
                 }
               }
             }

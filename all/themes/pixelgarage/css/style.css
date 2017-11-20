@@ -10394,7 +10394,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-post div.row div.col-sm-12 .quote-wrapper .field-name-field-quote .field-items .field-item {
   display: inline-block;
   margin: 0 auto;
-  font-family: 'OpenSansBold', sans-serif;
+  font-family: 'OpenSansRegular', sans-serif;
   text-align: left;
   color: white;
   line-height: 1.1;
@@ -10633,11 +10633,11 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-funktion-ort {
-  font-size: 5.46875vw;
+  font-size: 4.375vw;
 }
 @media screen and (min-width: 350px) {
   .node.node-post.view-mode-full div.row div.col-sm-12 .quote-wrapper .field-funktion-ort {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 /*
@@ -12243,8 +12243,8 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-footer .col-sm-4 .field-name-field-block .field-item ul.menu > li > a.checked,
 .node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.menu > li > span.checked,
 .node.node-footer .col-sm-4 .field-name-field-block .field-item ul.menu > li > span.checked {
-  color: white;
-  border: 1.5px solid white;
+  color: #747679;
+  border: 1.5px solid #747679;
 }
 @media screen and (min-width: 48em) {
   .node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.menu > li > a,
@@ -14312,18 +14312,18 @@ form.webform-client-form .webform-component textarea {
 form.webform-client-form .webform-component input.form-text::-moz-placeholder,
 form.webform-client-form .webform-component textarea::-moz-placeholder {
   text-align: left;
-  color: #103c55;
+  color: rgba(10, 60, 85, 0.5);
   opacity: 1;
 }
 form.webform-client-form .webform-component input.form-text:-ms-input-placeholder,
 form.webform-client-form .webform-component textarea:-ms-input-placeholder {
   text-align: left;
-  color: #103c55;
+  color: rgba(10, 60, 85, 0.5);
 }
 form.webform-client-form .webform-component input.form-text::-webkit-input-placeholder,
 form.webform-client-form .webform-component textarea::-webkit-input-placeholder {
   text-align: left;
-  color: #103c55;
+  color: rgba(10, 60, 85, 0.5);
 }
 form.webform-client-form .webform-component input.form-text:focus,
 form.webform-client-form .webform-component input.form-text:hover,
@@ -15226,14 +15226,14 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   border-radius: 0;
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text::-moz-placeholder {
-  color: #103c55;
+  color: rgba(10, 60, 85, 0.5);
   opacity: 1;
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text:-ms-input-placeholder {
-  color: #103c55;
+  color: rgba(10, 60, 85, 0.5);
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text::-webkit-input-placeholder {
-  color: #103c55;
+  color: rgba(10, 60, 85, 0.5);
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text:focus,
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-wrapper .views-exposed-widgets .views-exposed-widget.views-widget-filter-combine .views-widget .form-item input.form-text:hover {
@@ -15332,6 +15332,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
     padding: 5px 10px;
     font-family: 'OpenSansRegular', sans-serif;
     font-size: 18px;
+    letter-spacing: 0.017em;
     background: #EDEEF2 none;
     border: 1.5px solid white;
   }
@@ -15341,7 +15342,9 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.secondary > li > span.active,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.secondary > li > a.checked,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.secondary > li > span.checked {
-    color: #ffb119;
+    font-family: 'OpenSansSemibold', sans-serif;
+    color: #103c55;
+    letter-spacing: normal;
   }
 }
 @media screen and (min-width: 64em) {
