@@ -5,8 +5,8 @@
 // Variables
 // -------------------------
 @pxl-font-size-mobile: 36px;
-@pxl-menu-secondary-margin-small: 20px;
-@pxl-menu-secondary-margin: 25px;
+@pxl-menu-secondary-margin-small: 30px;
+@pxl-menu-secondary-margin: 35px;
 @pxl-menu-secondary-shift-small: @pxl-menu-secondary-margin-small + 31px;
 @pxl-menu-secondary-shift: @pxl-menu-secondary-margin + 37px;
 
@@ -33,14 +33,14 @@
         cursor: pointer;
         display: inline-block;
         padding: 0 10px 2px;
-        font-family: @pxl-text-font;
+        font-family: @pxl-text-font-bold;
         font-size: 16px;
         line-height: 1;
         text-transform: lowercase;
         color: @color;
         outline: none;
         #pxl-mixins.border-radius(0);
-        border: 1.5px solid @color;
+        border: 2px solid @color;
         background: none;
 
         &:hover, &.active, &.checked {
@@ -107,12 +107,12 @@
 
               @media @tablet {
                 max-width: 120px;
-                font-size: 18px;
+                font-size: 16px;
                 height: 21px;
               }
               @media @normal {
                 max-width: 160px;
-                font-size: 24px;
+                font-size: 20px;
                 height: 27px;
               }
             }
@@ -137,12 +137,12 @@
           }
 
           @media @tablet {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
           }
           @media @normal {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
           }
         }
       }
@@ -192,8 +192,13 @@ header#navbar {
 
   .navbar-top-container > .container {
     position: relative;
-    padding: 0 @grid-gutter-width / 2;
+    padding: 0 @grid-gutter-width/2;
+    width: 100%;
     height: auto;
+
+    @media @tablet {
+      padding: 0 @grid-gutter-width;
+    }
 
     .navbar-meta {
       position: relative;
@@ -250,7 +255,7 @@ header#navbar {
       .region-navigation {
         display: inline-block;
         #pxl-mixins.center-xy(absolute);
-        .call2action-menu();
+        .call2action-menu(@pxl-color-active, @pxl-color-main);
       }
 
       .navbar-toggle {
@@ -328,7 +333,7 @@ header#navbar {
           ul.menu:first-child {
             position: absolute;
             bottom: 10px;
-            right: @grid-gutter-width / 2;
+            right: @grid-gutter-width;
             padding: 0;
             width: 40%;
             text-align: right;
@@ -338,15 +343,17 @@ header#navbar {
 
               >a, >span {
                 padding: 3px 0;
-                font-size: 18px;
+                font-size: 16px;
               }
             }
           }
 
           ul.menu.secondary {
+            display: inline-block;
             position: absolute;
-            left: 0;
+            #pxl-mixins.center-horizontally();
             bottom: -@pxl-menu-secondary-shift-small;
+            width: @container-tablet;
             padding: 0 @grid-gutter-width / 2;
 
             >li {
@@ -356,9 +363,10 @@ header#navbar {
               width: 33%;
 
               >a, >span {
-                padding: 5px 10px;
+                padding: 2px 10px 5px;
                 font-family: @pxl-text-font;
                 font-size: 18px;
+                line-height: 1.2;
                 letter-spacing: 0.017em;
                 background: @pxl-color-gray-light none;
                 border: 1.5px solid white;
@@ -379,12 +387,13 @@ header#navbar {
           ul.menu:first-child  {
             >li {
               >a, >span {
-                font-size: 24px;
+                font-size: 20px;
               }
             }
           }
 
           ul.menu.secondary  {
+            width: @container-desktop;
             bottom: -@pxl-menu-secondary-shift;
             >li {
               >a, >span {

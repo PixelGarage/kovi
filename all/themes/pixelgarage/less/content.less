@@ -129,8 +129,17 @@ body {
     border: none;
     background: @pxl-color-main none;
 
+    .container {
+      width: 100%;
+      padding: 0 @grid-gutter-width/2;
+    }
+
     @media @tablet {
       height: @pxl-footer-height;
+
+      .container {
+        padding: 0 @grid-gutter-width;
+      }
     }
   }
 

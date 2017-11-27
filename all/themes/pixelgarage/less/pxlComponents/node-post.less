@@ -125,7 +125,7 @@
         .icon-quote {
           position: absolute;
           bottom: 0;
-          left: 0;
+          left: 3px;
           width: 60%;
 
           img {
@@ -135,7 +135,9 @@
         }
 
         .field-name-field-your-name {
+          display: inline-block;
           position: absolute;
+          max-width: 80%;
           top: -@pxl-offset-name;
           left: -@pxl-offset-name;
           padding: 5px;
@@ -143,11 +145,13 @@
           background: white;
 
           .field-item {
+            overflow: hidden;
             font-family: @pxl-text-font-medium;
-            font-size: 15px;
+            .resp-font-size(18px);
             color: @pxl-color-black;
             white-space: nowrap;
             text-transform: uppercase;
+            text-overflow: ellipsis;
             line-height: 1;
           }
         }
