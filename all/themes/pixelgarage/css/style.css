@@ -16655,7 +16655,7 @@ body .main-container {
 }
 @media screen and (min-width: 48em) {
   body .main-container {
-    padding: 30px 0 120px;
+    padding: 30px 15px 120px;
   }
 }
 body .main-container #page-header .region-header h2.block-title {
