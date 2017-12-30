@@ -14,31 +14,26 @@
 // General settings
 // -------------------------
 .node.node-donate {
-  margin-bottom: 50px;
+  margin: 30px auto;
+  max-width: 800px;
 
   .row {
-    .col-sm-12, .col-sm-6 {
+    .col-sm-12 {
       @media @tablet {
         padding-right: 10%;
       }
 
-      .field-name-title {
+      >.field-name-title {
         h2 {
-          font-family: @pxl-text-font-bold;
-          #pxl-mixins.font-size-responsive(30px, 22px);
-          letter-spacing: normal;
-          text-transform: none;
-          color: @text-color;
+          #pxl-mixins.title();
         }
       }
 
-      .field-name-body {
+      >.field-name-body {
+        margin: 0 0 80px;
         #pxl-mixins.wysiwyg-body();
-
-        p {
-          line-height: 22px;
-        }
       }
+
 
       .field-name-field-account-details {
         margin: 30px auto 0;
@@ -49,9 +44,6 @@
           line-height: 22px;
         }
       }
-
-      //
-      // webform see webform.less
     }
   }
 }

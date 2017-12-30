@@ -40,6 +40,13 @@ if(typeof(CKEDITOR) !== 'undefined') {
         }
       },
       {
+        name: 'Leadtext',
+        element: 'p',
+        attributes: {
+          'class': 'pxl-leadtext'
+        }
+      },
+      {
         name: 'Subtext',
         element: 'p',
         attributes: {

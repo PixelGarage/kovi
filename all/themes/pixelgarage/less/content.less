@@ -5,7 +5,7 @@
 // Variables
 // -------------------------
 @header-media:  ~"screen and (min-width: 640px)";
-@pxl-footer-height-small: 220px;
+@pxl-footer-height-small: 240px;
 @pxl-footer-height: 120px;
 
 
@@ -46,11 +46,11 @@ body {
   background-color: @pxl-color-body-bg;
 
   .main-container {
-    padding-bottom: @pxl-footer-height-small;
+    padding: 30px @grid-gutter-width/2 @pxl-footer-height-small;
     height: 100%;
 
     @media @tablet {
-      padding-bottom: @pxl-footer-height;
+      padding: 30px 0 @pxl-footer-height;
     }
 
     #page-header {

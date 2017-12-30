@@ -147,11 +147,18 @@
   Drupal.behaviors.fullSizeClickableItems = {
     attach: function () {
       var $clickablePosts = $('.view-post-grid .pe-item-no-ajax'),
+        $clickableTestimonials = $('.view-post-grid .pe-item-no-link'),
         $clickableOrgas = $('.view-organisations .pe-item');
 
       $clickablePosts.once('click', function () {
         $(this).on('click', function () {
           window.location = $(this).find(".node-post .field-name-field-image a").attr("href");
+          return false;
+        });
+      });
+      $clickableTestimonials.once('click', function () {
+        $(this).on('click', function () {
+          window.location = $(this).find(".node-testimonial .field-name-body a").attr("href");
           return false;
         });
       });

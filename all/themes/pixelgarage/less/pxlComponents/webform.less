@@ -14,7 +14,7 @@
 
 // field colors
 @webform-color-input: @text-color;
-@webform-color-input-bg: rgba(255,255,255,0.0);
+@webform-color-input-bg: @pxl-color-body-bg;
 @webform-color-placeholder: @text-color-placeholder;
 @webform-color-border: @pxl-color-main;
 @webform-color-border-active: @pxl-color-main;
@@ -288,6 +288,17 @@ form.webform-client-form {
     .form-control,
     .form-managed-file {
       height: @webform-control-height;
+    }
+
+    .input-group {
+      .input-group-addon {
+        border: none;
+        background: none;
+
+        span.icon {
+
+        }
+      }
     }
 
     input.form-text, textarea {

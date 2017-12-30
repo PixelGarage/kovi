@@ -64,7 +64,12 @@
           #pxl-mixins.font-size-responsive(16px);
           letter-spacing: 1.2px;
           text-transform: lowercase;
+          text-decoration: none;
           color: white;
+
+          &:hover, &.active, &.checked {
+            color: @pxl-color-gray;
+          }
         }
       }
     }
@@ -87,10 +92,55 @@
 
     .field-name-field-block {
       .field-item {
-        margin: 15px auto 0;
+        margin: 0;
         text-align: center;
 
-        .call2action-menu(white, @pxl-color-gray);
+        ul.nav {
+          li {
+            display: block;
+            float: none;
+            padding: 0;
+            line-height: 1;
+
+            a, span {
+              cursor: pointer;
+              display: inline-block;
+              padding: 10px 0;
+              font-family: @pxl-text-font;
+              #pxl-mixins.font-size-responsive(16px);
+              letter-spacing: 1.2px;
+              text-transform: lowercase;
+              text-decoration: none;
+              line-height: 1;
+              color: white;
+              outline: none;
+              background: none;
+
+              &:hover, &.active, &.checked {
+                color: @pxl-color-gray;
+              }
+            }
+
+            &.menu-donate {
+              >a, >span {
+                padding: 0 5px 2px;
+                line-height: 1.2;
+                #pxl-mixins.border-radius(0);
+                border: 2px solid white;
+                background: none;
+
+                &:hover, &.active, &.checked {
+                  color: @pxl-color-gray;
+                  border: 2px solid @pxl-color-gray;
+                }
+
+                @media @tablet {
+                  padding: 0 10px 2px;
+                }
+              }
+            }
+          }
+        }
       }
     }
 

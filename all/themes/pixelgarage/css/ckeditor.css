@@ -2348,6 +2348,11 @@
   clip: auto;
 }
 @font-face {
+  font-family: 'OpenSansLight';
+  src: url('../fonts/OpenSansLight/OpenSansLight.eot');
+  src: url('../fonts/OpenSansLight/OpenSansLight.eot') format('embedded-opentype'), url('../fonts/OpenSansLight/OpenSansLight.woff2') format('woff2'), url('../fonts/OpenSansLight/OpenSansLight.woff') format('woff'), url('../fonts/OpenSansLight/OpenSansLight.ttf') format('truetype'), url('../fonts/OpenSansLight/OpenSansLight.svg#OpenSansLight') format('svg');
+}
+@font-face {
   font-family: 'OpenSansRegular';
   src: url('../fonts/OpenSansRegular/OpenSansRegular.eot');
   src: url('../fonts/OpenSansRegular/OpenSansRegular.eot') format('embedded-opentype'), url('../fonts/OpenSansRegular/OpenSansRegular.woff2') format('woff2'), url('../fonts/OpenSansRegular/OpenSansRegular.woff') format('woff'), url('../fonts/OpenSansRegular/OpenSansRegular.ttf') format('truetype'), url('../fonts/OpenSansRegular/OpenSansRegular.svg#OpenSansRegular') format('svg');
@@ -2410,6 +2415,29 @@
 @media screen and (min-width: 64em) {
   .pxl-subtitle {
     font-size: 24px;
+  }
+}
+.pxl-leadtext {
+  font-family: 'OpenSansLight', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (min-width: 38.4em) {
+  .pxl-leadtext {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .pxl-leadtext {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .pxl-leadtext {
+    font-size: 20px;
   }
 }
 .pxl-normal {

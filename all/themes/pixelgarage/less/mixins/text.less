@@ -99,6 +99,15 @@
     color: @text-color;
   }
 
+  .leadtext() {
+    font-family: @pxl-text-font-light;
+    .font-size-responsive(@resp-leadtext-size-max,@resp-leadtext-size-med,@resp-leadtext-size-min);
+    letter-spacing: @leadtext-letter-spacing;
+    line-height: @leadtext-line-height;
+    text-align: @leadtext-text-align;
+    color: @text-color;
+  }
+
   .text() {
     font-family: @pxl-text-font;
     .font-size-responsive();
@@ -132,12 +141,12 @@
   // WYSIWYG body
   .wysiwyg-body() {
     h1, h2, h3, .pxl-title {
-      margin: 10px auto 20px;
+      margin: 20px auto;
       .title();
     }
 
     h4, h5, h6, .pxl-subtitle {
-      margin: 10px auto;
+      margin: 20px auto 10px;
       .subtitle();
     }
 
@@ -154,6 +163,11 @@
     .pxl-quote {
       .title();
       text-align: center;
+    }
+
+    .pxl-leadtext {
+      margin-bottom: 20px;
+      .leadtext();
     }
 
     a {

@@ -126,7 +126,7 @@ function _random_nodes_of_bundle($bundle) {
 
   // return a random node list
   $rand_key = array_rand($nodes, 1);
-  $pos = ($bundle == 'testimonial') ? 5 : 1;
+  $pos = ($bundle == 'testimonial') ? 4 : 2;
   return array(
     $pos => array($rand_key => node_view($nodes[$rand_key], 'teaser'))
   );
