@@ -16534,6 +16534,9 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
     height: 20px;
   }
 }
+header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li .menu-attach-block-drop-link {
+  display: none;
+}
 @media screen and (min-width: 48em) {
   header#navbar .navbar-top-container > .container .navbar-collapse {
     padding: 0;
