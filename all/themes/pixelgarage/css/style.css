@@ -12234,8 +12234,8 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-footer div.col-sm-12,
 .node.node-footer .col-sm-4 {
   position: static;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 0;
 }
 .node.node-footer div.col-sm-12 .field-name-field-impressum .field-item,
 .node.node-footer .col-sm-4 .field-name-field-impressum .field-item {
