@@ -9707,6 +9707,9 @@ body.navbar-tray-open.navbar-vertical.navbar-fixed {
  *  Three part element mixins
  * --------------------------------------------------*/
 /*
+ *  CKEditor accordion component
+ * --------------------------------------------------*/
+/*
  *  Bootstrap accordion mixin
  * --------------------------------------------------*/
 /*
@@ -11101,7 +11104,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-webform .row .col-sm-6 .field-name-body u:hover,
 .node.node-webform .row .col-sm-12 .field-name-body u:focus,
 .node.node-webform .row .col-sm-6 .field-name-body u:focus {
-  color: #000000;
+  color: white;
 }
 .node.node-webform .row .col-sm-12 .field-name-body mark,
 .node.node-webform .row .col-sm-6 .field-name-body mark {
@@ -11590,7 +11593,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body u:hover,
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body u:focus,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body u:focus {
-  color: #000000;
+  color: white;
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body mark,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body mark {
@@ -11643,6 +11646,492 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body audio,
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body iframe,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body iframe {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 15px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 350px;
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl {
+  border: none;
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dt .ckeditor-accordion-toggle:before,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dt .ckeditor-accordion-toggle:before,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dt .ckeditor-accordion-toggle:after,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dt .ckeditor-accordion-toggle:after {
+  display: none;
+  background: #000000;
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler {
+  padding: 20px 15px 20px 0;
+  font-family: 'OpenSansBold';
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: left;
+  color: #000000;
+  border: none;
+  background: none;
+}
+@media screen and (min-width: 35.2em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler {
+    font-size: 3.90625vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler {
+    font-size: 30px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h1,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h1,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h2,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h2,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h3,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h3,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title {
+  margin: 20px auto;
+  font-family: 'OpenSansBold';
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (min-width: 35.2em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h1,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h1,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h2,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h2,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h3,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h3,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title {
+    font-size: 3.90625vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h1,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h1,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h2,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h2,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h3,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h3,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h1,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h1,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h2,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h2,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h3,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h3,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title {
+    font-size: 30px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h4,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h4,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h5,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h5,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h6,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h6,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle {
+  margin: 20px auto 10px;
+  font-family: 'OpenSansSemibold';
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 1.14em;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (min-width: 36em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h4,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h4,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h5,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h5,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h6,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h6,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle {
+    font-size: 3.125vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h4,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h4,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h5,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h5,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h6,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h6,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h4,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h4,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h5,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h5,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd h6,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd h6,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtitle {
+    font-size: 24px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd p,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd p {
+  margin: 0 0 10px;
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.14em;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (min-width: 42.35294117647059em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd p,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd p {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd p,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd p {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd p,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd p {
+    font-size: 17px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd small,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd small,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0;
+  line-height: 1.1667em;
+  text-align: left;
+}
+@media screen and (min-width: 41.142857142857146em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext {
+    font-size: 1.82291667vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd small,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-subtext {
+    text-align: left;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote {
+  font-family: 'OpenSansBold';
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 1;
+  text-align: left;
+  color: #000000;
+  text-align: center;
+}
+@media screen and (min-width: 35.2em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote {
+    font-size: 3.90625vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote {
+    font-size: 30px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext {
+  margin-bottom: 20px;
+  font-family: 'OpenSansLight', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.2em;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (min-width: 38.4em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext {
+    font-size: 2.60416667vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-leadtext {
+    font-size: 20px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd a,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd a {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.14em;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (min-width: 42.35294117647059em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd a,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd a {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd a,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd a {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd a,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd a {
+    font-size: 17px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd a:hover,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd a:hover,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd a:focus,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd a:focus {
+  color: white;
+  text-decoration: underline;
+  background: none;
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd pre,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd pre,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd address,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd address,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd i,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.14em;
+  text-align: left;
+  color: #000000;
+  font-family: 'OpenSansRegular', sans-serif;
+}
+@media screen and (min-width: 42.35294117647059em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd pre,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd pre,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd address,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd address,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd i,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd pre,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd pre,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd address,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd address,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd i,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd pre,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd pre,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd address,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd address,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd i,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
+    font-size: 17px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.14em;
+  text-align: left;
+  color: #000000;
+  font-family: 'OpenSansBold', sans-serif;
+}
+@media screen and (min-width: 42.35294117647059em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
+    font-size: 17px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.14em;
+  text-align: left;
+  color: #000000;
+}
+@media screen and (min-width: 42.35294117647059em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
+    font-size: 17px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u:hover,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u:hover,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u:focus,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u:focus {
+  color: white;
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
+  font-family: 'OpenSansRegular', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 1.14em;
+  text-align: left;
+  color: #000000;
+  background-color: #ff0;
+}
+@media screen and (min-width: 42.35294117647059em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
+    font-size: 2.21354167vw;
+  }
+}
+@media screen and (min-width: 48em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
+    font-size: 17px;
+  }
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd hr,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd hr {
+  border: 0;
+  border-bottom: 2px solid white;
+  background: none;
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd img,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd img {
+  display: block;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 0;
+  max-width: 100%;
+  height: auto;
+}
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd embed,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd embed,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd video,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd video,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd audio,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd audio,
+.node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd iframe,
+.node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd iframe {
   display: block;
   overflow: hidden;
   margin: 20px auto;
@@ -11995,7 +12484,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u:hover,
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u:focus {
-  color: #000000;
+  color: white;
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item mark {
   font-family: 'OpenSansRegular', sans-serif;
@@ -12756,7 +13245,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-donate .row .col-sm-12 > .field-name-body u:hover,
 .node.node-donate .row .col-sm-12 > .field-name-body u:focus {
-  color: #000000;
+  color: white;
 }
 .node.node-donate .row .col-sm-12 > .field-name-body mark {
   font-family: 'OpenSansRegular', sans-serif;
@@ -13104,7 +13593,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details u:hover,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details u:focus {
-  color: #000000;
+  color: white;
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details mark {
   font-family: 'OpenSansRegular', sans-serif;
@@ -13479,7 +13968,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u:hover,
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u:focus {
-  color: #000000;
+  color: white;
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item mark {
   font-family: 'OpenSansRegular', sans-serif;

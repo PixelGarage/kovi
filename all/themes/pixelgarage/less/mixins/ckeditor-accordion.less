@@ -1,0 +1,47 @@
+/*
+ *  CKEditor accordion component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+// Component
+// -------------------------
+#pxl-mixins {
+  .ckeditor-accordion-container() {
+    dl {
+      border: none;
+
+      dt {
+        // accordion title
+        .ckeditor-accordion-toggle {
+          &:before, &:after {
+            display: none;
+            background: @text-color;
+          }
+
+          &.active {
+
+          }
+        }
+
+        a.ckeditor-accordion-toggler {
+          padding: 20px 15px 20px 0;
+          #pxl-mixins.title();
+          border: none;
+          background: none;
+        }
+      }
+
+      dd {
+        // accordion body
+        #pxl-mixins.wysiwyg-body();
+      }
+    }
+  }
+}
