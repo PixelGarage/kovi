@@ -45,7 +45,7 @@ function postcard_create_pdf($pdf_name, &$options) {
   try {
     //
     // create postcard tcpdf object
-    $pdf = tcpdf_document_instance(array(), 'P', 'mm', 'A6'); //105 x 148 mm
+    $pdf = tcpdf_document_instance(array(), 'P', 'mm', 'COMPACT'); //108 x 171 mm
 
     //
     // allow others to draw a custom pdf, pass options
