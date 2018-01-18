@@ -54,8 +54,8 @@ function pixelgarage_preprocess_page(&$vars) {
   switch ($language->language) {
     case 'de':
     default:
-    $organisation = 3474;
-    $community = 3476;
+      $organisation = 3474;
+      $community = 3476;
     break;
     case 'fr':
       $organisation = 3475;
@@ -70,16 +70,17 @@ function pixelgarage_preprocess_page(&$vars) {
       $community = 3509;
       break;
   }
-  $vars['secondary_nav'][3472]['#title'] .= _get_count('post');  // personally
-  $vars['secondary_nav'][$organisation]['#title'] .= _get_count('organisation');  // nationwide
+  $vars['secondary_nav'][3472]['#title'] .= _get_count('post', $language->language);  // personally
+  $vars['secondary_nav'][$organisation]['#title'] .= _get_count('organisation', $language->language);  // organisations
 }
 
-function _get_count($bundle) {
+function _get_count($bundle, $lang) {
   // get the published posts
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', $bundle)
-    ->propertyCondition('status', NODE_PUBLISHED);
+    ->propertyCondition('status', NODE_PUBLISHED)
+    ->propertyCondition('language', array($lang, LANGUAGE_NONE), 'IN');
   $result = $query->count()->execute();
 
   return $result ? ' (' . $result  . ')' : ' (0)';
