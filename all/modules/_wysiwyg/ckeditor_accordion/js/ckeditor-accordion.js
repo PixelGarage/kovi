@@ -19,9 +19,11 @@
           }
 
           // The first one is the correct one.
-          $accordion.children('dt:first').addClass('active');
-          $accordion.children('dd:first').addClass('active');
-
+          if (!Drupal.settings.ckeditor_accordion) {
+            $accordion.children('dt:first').addClass('active');
+            $accordion.children('dd:first').addClass('active');
+            $accordion.children('dd:first').css('display', 'block');
+          }
           // Turn the accordion tabs to links so that the content is accessible & can be traversed using keyboard.
           $accordion.children('dt').each(function () {
             var $tab = $(this);

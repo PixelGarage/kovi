@@ -15495,7 +15495,7 @@ form.webform-client-form fieldset.panel .panel-body .webform-component[class*="-
   display: inline-block;
   margin: 0 -2px 30px;
   padding-right: 20px;
-  width: 30%;
+  width: 100%;
 }
 form.webform-client-form fieldset.panel .panel-body .webform-component[class*="-city"] {
   display: inline-block;
@@ -15746,7 +15746,7 @@ form.webform-client-form .webform-component[class*="-plz"] {
   display: inline-block;
   margin: 0 -2px 30px;
   padding-right: 20px;
-  width: 30%;
+  width: 100%;
 }
 form.webform-client-form .webform-component[class*="-city"] {
   display: inline-block;

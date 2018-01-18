@@ -103,7 +103,3 @@
   margin: 0;
   will-change: height;
 }
-
-.ckeditor-accordion-container > dl dd:first-of-type {
-  display: block;
-}
