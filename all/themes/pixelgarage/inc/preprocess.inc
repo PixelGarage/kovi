@@ -65,7 +65,7 @@ function pixelgarage_preprocess_page(&$vars) {
       $organisation = 3473;
       $community = 3470;
       break;
-    case 'en':
+    case 'it':
       $organisation = 3508;
       $community = 3509;
       break;
