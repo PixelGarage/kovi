@@ -2375,7 +2375,7 @@
  * --------------------------------------------------*/
 .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -2494,7 +2494,7 @@
   }
 }
 .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;

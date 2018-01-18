@@ -10731,7 +10731,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-webform .row .col-sm-12 .field-name-body .pxl-title,
 .node.node-webform .row .col-sm-6 .field-name-body .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -10898,7 +10898,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-webform .row .col-sm-12 .field-name-body .pxl-quote,
 .node.node-webform .row .col-sm-6 .field-name-body .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -10972,112 +10972,17 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-webform .row .col-sm-6 .field-name-body i,
 .node.node-webform .row .col-sm-12 .field-name-body em,
 .node.node-webform .row .col-sm-6 .field-name-body em {
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansRegular', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-webform .row .col-sm-12 .field-name-body pre,
-  .node.node-webform .row .col-sm-6 .field-name-body pre,
-  .node.node-webform .row .col-sm-12 .field-name-body address,
-  .node.node-webform .row .col-sm-6 .field-name-body address,
-  .node.node-webform .row .col-sm-12 .field-name-body i,
-  .node.node-webform .row .col-sm-6 .field-name-body i,
-  .node.node-webform .row .col-sm-12 .field-name-body em,
-  .node.node-webform .row .col-sm-6 .field-name-body em {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-webform .row .col-sm-12 .field-name-body pre,
-  .node.node-webform .row .col-sm-6 .field-name-body pre,
-  .node.node-webform .row .col-sm-12 .field-name-body address,
-  .node.node-webform .row .col-sm-6 .field-name-body address,
-  .node.node-webform .row .col-sm-12 .field-name-body i,
-  .node.node-webform .row .col-sm-6 .field-name-body i,
-  .node.node-webform .row .col-sm-12 .field-name-body em,
-  .node.node-webform .row .col-sm-6 .field-name-body em {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-webform .row .col-sm-12 .field-name-body pre,
-  .node.node-webform .row .col-sm-6 .field-name-body pre,
-  .node.node-webform .row .col-sm-12 .field-name-body address,
-  .node.node-webform .row .col-sm-6 .field-name-body address,
-  .node.node-webform .row .col-sm-12 .field-name-body i,
-  .node.node-webform .row .col-sm-6 .field-name-body i,
-  .node.node-webform .row .col-sm-12 .field-name-body em,
-  .node.node-webform .row .col-sm-6 .field-name-body em {
-    font-size: 17px;
-  }
 }
 .node.node-webform .row .col-sm-12 .field-name-body strong,
 .node.node-webform .row .col-sm-6 .field-name-body strong,
 .node.node-webform .row .col-sm-12 .field-name-body b,
 .node.node-webform .row .col-sm-6 .field-name-body b {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansBold', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-webform .row .col-sm-12 .field-name-body strong,
-  .node.node-webform .row .col-sm-6 .field-name-body strong,
-  .node.node-webform .row .col-sm-12 .field-name-body b,
-  .node.node-webform .row .col-sm-6 .field-name-body b {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-webform .row .col-sm-12 .field-name-body strong,
-  .node.node-webform .row .col-sm-6 .field-name-body strong,
-  .node.node-webform .row .col-sm-12 .field-name-body b,
-  .node.node-webform .row .col-sm-6 .field-name-body b {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-webform .row .col-sm-12 .field-name-body strong,
-  .node.node-webform .row .col-sm-6 .field-name-body strong,
-  .node.node-webform .row .col-sm-12 .field-name-body b,
-  .node.node-webform .row .col-sm-6 .field-name-body b {
-    font-size: 17px;
-  }
 }
 .node.node-webform .row .col-sm-12 .field-name-body u,
 .node.node-webform .row .col-sm-6 .field-name-body u {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   color: #ffb119;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-webform .row .col-sm-12 .field-name-body u,
-  .node.node-webform .row .col-sm-6 .field-name-body u {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-webform .row .col-sm-12 .field-name-body u,
-  .node.node-webform .row .col-sm-6 .field-name-body u {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-webform .row .col-sm-12 .field-name-body u,
-  .node.node-webform .row .col-sm-6 .field-name-body u {
-    font-size: 17px;
-  }
 }
 .node.node-webform .row .col-sm-12 .field-name-body u:hover,
 .node.node-webform .row .col-sm-6 .field-name-body u:hover,
@@ -11087,31 +10992,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-webform .row .col-sm-12 .field-name-body mark,
 .node.node-webform .row .col-sm-6 .field-name-body mark {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   background-color: #ff0;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-webform .row .col-sm-12 .field-name-body mark,
-  .node.node-webform .row .col-sm-6 .field-name-body mark {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-webform .row .col-sm-12 .field-name-body mark,
-  .node.node-webform .row .col-sm-6 .field-name-body mark {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-webform .row .col-sm-12 .field-name-body mark,
-  .node.node-webform .row .col-sm-6 .field-name-body mark {
-    font-size: 17px;
-  }
 }
 .node.node-webform .row .col-sm-12 .field-name-body hr,
 .node.node-webform .row .col-sm-6 .field-name-body hr {
@@ -11160,7 +11041,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-title h2,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-title h2 {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -11198,7 +11079,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body .pxl-title,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -11365,7 +11246,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body .pxl-quote,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -11439,112 +11320,17 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body i,
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body em,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body em {
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansRegular', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body pre,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body pre,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body address,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body address,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body i,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body i,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body em,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body em {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body pre,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body pre,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body address,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body address,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body i,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body i,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body em,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body em {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body pre,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body pre,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body address,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body address,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body i,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body i,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body em,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body em {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body strong,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body strong,
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body b,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body b {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansBold', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body strong,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body strong,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body b,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body b {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body strong,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body strong,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body b,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body b {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body strong,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body strong,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body b,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body b {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body u,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body u {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   color: #ffb119;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body u,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body u {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body u,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body u {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body u,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body u {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body u:hover,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body u:hover,
@@ -11554,31 +11340,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body mark,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body mark {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   background-color: #ff0;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body mark,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body mark {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body mark,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body mark {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body mark,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body mark {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body hr,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body hr {
@@ -11626,7 +11388,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dt a.ckeditor-accordion-toggler {
   padding: 20px 15px 20px 0;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -11662,7 +11424,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -11829,7 +11591,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -11903,112 +11665,17 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansRegular', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd pre,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd pre,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd address,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd address,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd i,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd pre,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd pre,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd address,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd address,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd i,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd pre,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd pre,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd address,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd address,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd i,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd i,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd em,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd em {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansBold', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd strong,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd strong,
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd b,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd b {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   color: #ffb119;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd u:hover,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd u:hover,
@@ -12018,31 +11685,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   background-color: #ff0;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd mark,
-  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd mark {
-    font-size: 17px;
-  }
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl dd hr,
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl dd hr {
@@ -12076,6 +11719,26 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   height: auto;
   min-height: 350px;
 }
+body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd > p,
+body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd > p {
+  -webkit-column-count: 1;
+  -moz-column-count: 1;
+  column-count: 1;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+}
+@media screen and (min-width: 48em) {
+  body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd > p,
+  body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd > p {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+  }
+}
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .paragraphs-items > .field-name-field-paragraphs > .field-items > .field-item:not(:last-child),
 .node.node-page.view-mode-default > .row > div.col-sm-12 > .paragraphs-items > .field-name-field-paragraphs > .field-items > .field-item:not(:last-child) {
   margin-bottom: 30px;
@@ -12101,7 +11764,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   margin-top: 40px;
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-title h2 {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -12131,7 +11794,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item h3,
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -12255,7 +11918,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -12315,116 +11978,21 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item address,
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item i,
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item em {
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansRegular', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item pre,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item address,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item i,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item em {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item pre,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item address,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item i,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item em {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item pre,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item address,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item i,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item em {
-    font-size: 17px;
-  }
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item strong,
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item b {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansBold', sans-serif;
 }
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item strong,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item b {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item strong,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item b {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item strong,
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item b {
-    font-size: 17px;
-  }
-}
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   color: #ffb119;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u {
-    font-size: 17px;
-  }
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u:hover,
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item u:focus {
   color: white;
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item mark {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   background-color: #ff0;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item mark {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item mark {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item mark {
-    font-size: 17px;
-  }
 }
 .node.node-testimonial.view-mode-teaser > .row > div.col-sm-12 > .field-name-body .field-item hr {
   border: 0;
@@ -12798,7 +12366,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .node.node-donate .row .col-sm-12 > .field-name-title h2 {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -12828,7 +12396,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-donate .row .col-sm-12 > .field-name-body h3,
 .node.node-donate .row .col-sm-12 > .field-name-body .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -12952,7 +12520,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .node.node-donate .row .col-sm-12 > .field-name-body .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13012,116 +12580,21 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-donate .row .col-sm-12 > .field-name-body address,
 .node.node-donate .row .col-sm-12 > .field-name-body i,
 .node.node-donate .row .col-sm-12 > .field-name-body em {
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansRegular', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body pre,
-  .node.node-donate .row .col-sm-12 > .field-name-body address,
-  .node.node-donate .row .col-sm-12 > .field-name-body i,
-  .node.node-donate .row .col-sm-12 > .field-name-body em {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body pre,
-  .node.node-donate .row .col-sm-12 > .field-name-body address,
-  .node.node-donate .row .col-sm-12 > .field-name-body i,
-  .node.node-donate .row .col-sm-12 > .field-name-body em {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body pre,
-  .node.node-donate .row .col-sm-12 > .field-name-body address,
-  .node.node-donate .row .col-sm-12 > .field-name-body i,
-  .node.node-donate .row .col-sm-12 > .field-name-body em {
-    font-size: 17px;
-  }
 }
 .node.node-donate .row .col-sm-12 > .field-name-body strong,
 .node.node-donate .row .col-sm-12 > .field-name-body b {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansBold', sans-serif;
 }
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body strong,
-  .node.node-donate .row .col-sm-12 > .field-name-body b {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body strong,
-  .node.node-donate .row .col-sm-12 > .field-name-body b {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body strong,
-  .node.node-donate .row .col-sm-12 > .field-name-body b {
-    font-size: 17px;
-  }
-}
 .node.node-donate .row .col-sm-12 > .field-name-body u {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   color: #ffb119;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body u {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body u {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body u {
-    font-size: 17px;
-  }
 }
 .node.node-donate .row .col-sm-12 > .field-name-body u:hover,
 .node.node-donate .row .col-sm-12 > .field-name-body u:focus {
   color: white;
 }
 .node.node-donate .row .col-sm-12 > .field-name-body mark {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   background-color: #ff0;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body mark {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body mark {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 > .field-name-body mark {
-    font-size: 17px;
-  }
 }
 .node.node-donate .row .col-sm-12 > .field-name-body hr {
   border: 0;
@@ -13157,7 +12630,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-donate .row .col-sm-12 .field-name-field-account-details h3,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13281,7 +12754,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13341,116 +12814,21 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-donate .row .col-sm-12 .field-name-field-account-details address,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details i,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details em {
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansRegular', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details pre,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details address,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details i,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details em {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details pre,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details address,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details i,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details em {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details pre,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details address,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details i,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details em {
-    font-size: 17px;
-  }
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details strong,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details b {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansBold', sans-serif;
 }
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details strong,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details b {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details strong,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details b {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details strong,
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details b {
-    font-size: 17px;
-  }
-}
 .node.node-donate .row .col-sm-12 .field-name-field-account-details u {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   color: #ffb119;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details u {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details u {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details u {
-    font-size: 17px;
-  }
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details u:hover,
 .node.node-donate .row .col-sm-12 .field-name-field-account-details u:focus {
   color: white;
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details mark {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   background-color: #ff0;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details mark {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details mark {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .node.node-donate .row .col-sm-12 .field-name-field-account-details mark {
-    font-size: 17px;
-  }
 }
 .node.node-donate .row .col-sm-12 .field-name-field-account-details hr {
   border: 0;
@@ -13486,7 +12864,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
  *  Text paragraph component
  * --------------------------------------------------*/
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-title .field-item {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13513,7 +12891,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item h3,
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item .pxl-title {
   margin: 20px auto;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13637,7 +13015,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   }
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item .pxl-quote {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13697,116 +13075,21 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item address,
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item i,
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item em {
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansRegular', sans-serif;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item pre,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item address,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item i,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item em {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item pre,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item address,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item i,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item em {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item pre,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item address,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item i,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item em {
-    font-size: 17px;
-  }
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item strong,
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item b {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   font-family: 'OpenSansBold', sans-serif;
 }
-@media screen and (min-width: 42.35294117647059em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item strong,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item b {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item strong,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item b {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item strong,
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item b {
-    font-size: 17px;
-  }
-}
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   color: #ffb119;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u {
-    font-size: 17px;
-  }
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u:hover,
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item u:focus {
   color: white;
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item mark {
-  font-family: 'OpenSansRegular', sans-serif;
-  font-size: 15px;
-  letter-spacing: 0;
-  line-height: 1.14em;
-  text-align: left;
-  color: #000000;
   background-color: #ff0;
-}
-@media screen and (min-width: 42.35294117647059em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item mark {
-    font-size: 2.21354167vw;
-  }
-}
-@media screen and (min-width: 48em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item mark {
-    font-size: 17px;
-  }
-}
-@media screen and (min-width: 64em) {
-  .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item mark {
-    font-size: 17px;
-  }
 }
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-text .field-item hr {
   border: 0;
@@ -13848,7 +13131,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
  *  Block paragraph component
  * --------------------------------------------------*/
 .entity-paragraphs-item.paragraphs-item-block-paragraph .row .col-sm-12 .field-name-field-title .field-item {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13874,7 +13157,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
  *  Image paragraph component
  * --------------------------------------------------*/
 .entity-paragraphs-item.paragraphs-item-image-paragraph .row .col-sm-12 .field-name-field-title .field-item {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -13904,7 +13187,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
  *  BS carousel paragraph component
  * --------------------------------------------------*/
 .entity-paragraphs-item.paragraphs-item-bs-carousel-paragraph .row .col-sm-12 .field-name-field-title .field-item {
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 22px;
   letter-spacing: 0;
   line-height: 1;
@@ -16969,7 +16252,7 @@ body .main-container #page-header .region-header h2.block-title {
 body .main-container .row section h1.page-header {
   display: none;
   margin: 20px 0 10px;
-  font-family: 'OpenSansBold';
+  font-family: 'OpenSansRegular';
   font-size: 41px;
   border: none;
 }

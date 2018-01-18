@@ -31,6 +31,19 @@
         margin: 0 0 80px;
         #pxl-mixins.wysiwyg-body();
         #pxl-mixins.ckeditor-accordion-container();
+
+        dl > dd > p {
+          body.page-node-51 & {
+            .content-columns(1, @grid-gutter-width);
+          }
+        }
+        @media @tablet {
+          dl > dd > p {
+            body.page-node-51 & {
+              .content-columns(2, @grid-gutter-width);
+            }
+          }
+        }
       }
 
       >.paragraphs-items {
