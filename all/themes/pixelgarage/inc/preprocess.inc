@@ -54,20 +54,24 @@ function pixelgarage_preprocess_page(&$vars) {
   switch ($language->language) {
     case 'de':
     default:
-    $nationwide = 3474;
-    $locally = 3476;
+    $organisation = 3474;
+    $community = 3476;
     break;
     case 'fr':
-      $nationwide = 3475;
-      $locally = 3477;
+      $organisation = 3475;
+      $community = 3477;
       break;
     case 'en':
-      $nationwide = 3473;
-      $locally = 3470;
+      $organisation = 3473;
+      $community = 3470;
+      break;
+    case 'en':
+      $organisation = 3508;
+      $community = 3509;
       break;
   }
   $vars['secondary_nav'][3472]['#title'] .= _get_count('post');  // personally
-  $vars['secondary_nav'][$nationwide]['#title'] .= _get_count('organisation');  // nationwide
+  $vars['secondary_nav'][$organisation]['#title'] .= _get_count('organisation');  // nationwide
 }
 
 function _get_count($bundle) {
