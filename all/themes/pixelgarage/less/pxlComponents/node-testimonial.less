@@ -40,21 +40,15 @@
           p, strong, b, a, pre, address, i, em, u, mark, small {
             //#pxl-mixins.hyphenate();
             #pxl-mixins.subtitle();
-            .resp-font-size(30px);
+            .resp-font-size(28px);
             text-transform: lowercase;
+            color: @pxl-color-main;
           }
           a {
             color: white;
           }
           strong, b {
             font-family: @pxl-text-font-bold;
-          }
-
-          &:after {
-            content: '#KoVI';
-            #pxl-mixins.subtitle();
-            .resp-font-size(30px);
-            color: #fff;
           }
         }
       }
