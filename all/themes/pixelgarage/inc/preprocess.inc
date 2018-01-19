@@ -159,8 +159,8 @@ function _preprocess_node_post(&$vars, $view_mode) {
   $node = $vars['node'];
   $lang = '/' . $language->language;
   $node_url = $base_url . $lang . '/node/' . $node->nid;
-  $mail_subject = t("@title sagt JA zur KOVI", array('@title' => $node->field_your_name[LANGUAGE_NONE][0]['value']));
-  $html_body =  t('... weil ') . $node->field_quote[LANGUAGE_NONE][0]['value'];
+  $mail_subject = t("@title sagt JA zur KOVI, weil...", array('@title' => $node->field_your_name[LANGUAGE_NONE][0]['value']));
+  $html_body =  '«' . $node->field_quote[LANGUAGE_NONE][0]['value'] . '»' . t('<p></p><p>Komm auf die Seite und schau, ob du auch mitmachen möchtest.<br><a href="@link">Hier geht es zu meinem Beitrag</a></p><p>Liebe Grüsse</p>', array('@link' => $node_url));
   $mail_descr = drupal_html_to_text($html_body);
 
   $vars['shariff_attrs'] = array(
