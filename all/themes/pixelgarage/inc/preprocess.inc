@@ -37,8 +37,8 @@ function pixelgarage_preprocess_page(&$vars) {
       'data-services' => '["twitter","facebook","mail","whatsapp"]',
       'data-orientation' => "horizontally",
       'data-mail-url' => "mailto:",
-      'data-mail-subject' => variable_get('shariff_mail_subject', t("Die Kirchen sagen JA zu KoVI...")),
-      'data-mail-body' => variable_get('shariff_mail_body', t("Die Kirchen sagen JA zu KoVI. " . $url)),
+      'data-mail-subject' => variable_get('shariff_mail_subject', t("Kirche für KoVI, weil...")),
+      'data-mail-body' => variable_get('shariff_mail_body', t('<p>Die Kirche sagt JA zu KoVI.</p><p>Komm doch auf unsere Webseite und schau, ob du auch mitmachen möchtest.<br><a href="@link">Hier geht es zu unserer Webseite</a></p><p>Liebe Grüsse</p>', array('@link' => $url))),
       'data-lang' => "de",
       'data-url' => $url,
     );
@@ -159,8 +159,8 @@ function _preprocess_node_post(&$vars, $view_mode) {
   $node = $vars['node'];
   $lang = '/' . $language->language;
   $node_url = $base_url . $lang . '/node/' . $node->nid;
-  $mail_subject = t("@title sagt JA zur KOVI, weil...", array('@title' => $node->field_your_name[LANGUAGE_NONE][0]['value']));
-  $html_body =  '«' . $node->field_quote[LANGUAGE_NONE][0]['value'] . '»' . t('<p></p><p>Komm auf die Seite und schau, ob du auch mitmachen möchtest.<br><a href="@link">Hier geht es zu meinem Beitrag</a></p><p>Liebe Grüsse</p>', array('@link' => $node_url));
+  $mail_subject = t("@title sagt JA zur KoVI, weil...", array('@title' => $node->field_your_name[LANGUAGE_NONE][0]['value']));
+  $html_body =  '...' . $node->field_quote[LANGUAGE_NONE][0]['value'] . t('<p></p><p>Komm auf die Seite und schau, ob du auch mitmachen möchtest.<br><a href="@link">Hier geht es zu meinem Beitrag</a></p><p>Liebe Grüsse</p>', array('@link' => $node_url));
   $mail_descr = drupal_html_to_text($html_body);
 
   $vars['shariff_attrs'] = array(

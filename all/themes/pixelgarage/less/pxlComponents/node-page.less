@@ -16,7 +16,10 @@
 .node.node-page.view-mode-full,
 .node.node-page.view-mode-default {
   margin: 30px auto;
-  max-width: 800px;
+
+  body:not(.page-node-1460) & {
+    max-width: 800px;
+  }
 
   >.row {
     >div.col-sm-12 {
