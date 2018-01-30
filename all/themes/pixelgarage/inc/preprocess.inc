@@ -107,13 +107,17 @@ function pixelgarage_preprocess_views_view_proximity (&$vars) {
 }
 
 function _random_nodes_of_bundle($bundle) {
+  global $language;
+  $lang = $language->language;
   $result = FALSE;
+
   if ($bundle == 'testimonial') {
     // get the published testimonials
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'node')
       ->entityCondition('bundle', $bundle)
-      ->propertyCondition('status', NODE_PUBLISHED);
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->propertyCondition('language', array($lang, LANGUAGE_NONE), 'IN');
     $result = $query->execute();
   }
   else if ($bundle == 'post') {

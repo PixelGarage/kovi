@@ -10371,7 +10371,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-post div.row div.col-sm-12 .image-wrapper .field-name-field-your-name {
   display: inline-block;
   position: absolute;
-  max-width: 80%;
+  max-width: 95%;
   top: -8px;
   left: -8px;
   padding: 5px;
@@ -11726,8 +11726,8 @@ body:not(.page-node-1460) .node.node-page.view-mode-default {
   height: auto;
   min-height: 350px;
 }
-body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd > p,
-body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd > p {
+body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd,
+body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd {
   -webkit-column-count: 1;
   -moz-column-count: 1;
   column-count: 1;
@@ -11736,8 +11736,8 @@ body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .fi
   column-gap: 30px;
 }
 @media screen and (min-width: 48em) {
-  body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd > p,
-  body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd > p {
+  body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd,
+  body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
@@ -12262,7 +12262,6 @@ body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .fi
 .node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li a,
 .node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li span,
 .node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li span {
-  cursor: pointer;
   display: inline-block;
   padding: 10px 0;
   font-family: 'OpenSansRegular', sans-serif;
@@ -12299,18 +12298,16 @@ body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .fi
     font-size: 16px;
   }
 }
+.node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li a,
+.node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li a {
+  cursor: pointer;
+}
 .node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li a:hover,
 .node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li a:hover,
-.node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li span:hover,
-.node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li span:hover,
 .node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li a.active,
 .node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li a.active,
-.node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li span.active,
-.node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li span.active,
 .node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li a.checked,
-.node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li a.checked,
-.node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li span.checked,
-.node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li span.checked {
+.node.node-footer .col-sm-4 .field-name-field-block .field-item ul.nav li a.checked {
   color: #747679;
 }
 .node.node-footer div.col-sm-12 .field-name-field-block .field-item ul.nav li.menu-donate > a,
@@ -16256,12 +16253,12 @@ body {
   background-color: #EDEEF2;
 }
 body .main-container {
-  padding: 30px 15px 240px;
+  padding: 30px 15px 270px;
   height: 100%;
 }
 @media screen and (min-width: 48em) {
   body .main-container {
-    padding: 30px 15px 120px;
+    padding: 30px 15px 140px;
   }
 }
 body .main-container #page-header .region-header h2.block-title {
@@ -16311,7 +16308,7 @@ body footer.footer {
   right: 0;
   margin: 0;
   padding: 0;
-  height: 240px;
+  height: 270px;
   border: none;
   background: #103c55 none;
 }
@@ -16321,7 +16318,7 @@ body footer.footer .container {
 }
 @media screen and (min-width: 48em) {
   body footer.footer {
-    height: 120px;
+    height: 140px;
   }
   body footer.footer .container {
     padding: 0 30px;

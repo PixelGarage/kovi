@@ -165,7 +165,7 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   $post->field_e_mail[$post->language][0]['email'] = $submission->data[19][0]; // email
   $post->field_your_name[$post->language][0]['value'] = $submission->data[17][0]; // your name
   $post->field_image[$post->language][0]['fid'] = $submission->data[1][0]; // fid image
-  $post->field_quote[$post->language][0]['value'] = substr($submission->data[5][0], 0, 80); // Quote
+  $post->field_quote[$post->language][0]['value'] = substr($submission->data[5][0], 0, 100); // Quote
   $post->field_funktion[$post->language][0]['value'] = ($submission->data[23][0] == 'Andere') ? $submission->data[20][0] : $submission->data[23][0]; // Function
   $post->field_ort[$post->language][0]['value'] = $submission->data[26][0]; // Ort
   $post = node_submit($post);
