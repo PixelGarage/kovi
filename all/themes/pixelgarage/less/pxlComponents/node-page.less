@@ -17,7 +17,7 @@
 .node.node-page.view-mode-default {
   margin: 30px auto;
 
-  body:not(.page-node-1460) & {
+  body:not(.page-node-1460) &, body:not(.page-node-1461) &, body:not(.page-node-1508) & {
     max-width: 800px;
   }
 
@@ -36,13 +36,15 @@
         #pxl-mixins.ckeditor-accordion-container();
 
         dl > dd {
-          body.page-node-51 & {
+          body.page-node-51 &, body.page-node-52 &, body.page-node-1482 & {
+            // argument page (de, fr, it)
             .content-columns(1, @grid-gutter-width);
           }
         }
         @media @tablet {
           dl > dd {
-            body.page-node-51 & {
+            body.page-node-51 &, body.page-node-52 &, body.page-node-1482 {
+              // argument page (de, fr, it)
               .content-columns(2, @grid-gutter-width);
             }
           }

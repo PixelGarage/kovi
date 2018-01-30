@@ -11040,7 +11040,11 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   margin: 30px auto;
 }
 body:not(.page-node-1460) .node.node-page.view-mode-full,
-body:not(.page-node-1460) .node.node-page.view-mode-default {
+body:not(.page-node-1460) .node.node-page.view-mode-default,
+body:not(.page-node-1461) .node.node-page.view-mode-full,
+body:not(.page-node-1461) .node.node-page.view-mode-default,
+body:not(.page-node-1508) .node.node-page.view-mode-full,
+body:not(.page-node-1508) .node.node-page.view-mode-default {
   max-width: 800px;
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-title h2,
@@ -11727,7 +11731,11 @@ body:not(.page-node-1460) .node.node-page.view-mode-default {
   min-height: 350px;
 }
 body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd,
-body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd {
+body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd,
+body.page-node-52 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd,
+body.page-node-52 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd,
+body.page-node-1482 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd,
+body.page-node-1482 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd {
   -webkit-column-count: 1;
   -moz-column-count: 1;
   column-count: 1;
@@ -11737,7 +11745,11 @@ body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .fi
 }
 @media screen and (min-width: 48em) {
   body.page-node-51 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd,
-  body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd {
+  body.page-node-51 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd,
+  body.page-node-52 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd,
+  body.page-node-52 .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd,
+  .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-body dl > dd body.page-node-1482,
+  .node.node-page.view-mode-default > .row > div.col-sm-12 > .field-name-body dl > dd body.page-node-1482 {
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
@@ -16258,7 +16270,7 @@ body .main-container {
 }
 @media screen and (min-width: 48em) {
   body .main-container {
-    padding: 30px 15px 140px;
+    padding: 30px 15px 160px;
   }
 }
 body .main-container #page-header .region-header h2.block-title {
@@ -16318,7 +16330,7 @@ body footer.footer .container {
 }
 @media screen and (min-width: 48em) {
   body footer.footer {
-    height: 140px;
+    height: 160px;
   }
   body footer.footer .container {
     padding: 0 30px;
