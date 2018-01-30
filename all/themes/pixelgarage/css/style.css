@@ -11039,12 +11039,8 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 .node.node-page.view-mode-default {
   margin: 30px auto;
 }
-body:not(.page-node-1460) .node.node-page.view-mode-full,
-body:not(.page-node-1460) .node.node-page.view-mode-default,
-body:not(.page-node-1461) .node.node-page.view-mode-full,
-body:not(.page-node-1461) .node.node-page.view-mode-default,
-body:not(.page-node-1508) .node.node-page.view-mode-full,
-body:not(.page-node-1508) .node.node-page.view-mode-default {
+body:not(.page-node-1460, .page-node-1461, .page-node-1508) .node.node-page.view-mode-full,
+body:not(.page-node-1460, .page-node-1461, .page-node-1508) .node.node-page.view-mode-default {
   max-width: 800px;
 }
 .node.node-page.view-mode-full > .row > div.col-sm-12 > .field-name-title h2,
