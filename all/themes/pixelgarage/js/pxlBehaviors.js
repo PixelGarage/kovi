@@ -165,8 +165,10 @@
       $clickableOrgas.once('click', function () {
         $(this).on('click', function () {
           var link = $(this).find(".node-organisation a").attr("href");
-          window.open(link, '_blank');
-          return false;
+          if (link) {
+            window.open(link, '_blank');
+            return false;
+          }
         });
       });
 
