@@ -166,7 +166,15 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   $post->field_your_name[$post->language][0]['value'] = $submission->data[17][0]; // your name
   $post->field_image[$post->language][0]['fid'] = $submission->data[1][0]; // fid image
   $post->field_quote[$post->language][0]['value'] = substr($submission->data[5][0], 0, 100); // Quote
-  $post->field_funktion[$post->language][0]['value'] = ($submission->data[23][0] == 'Andere') ? $submission->data[20][0] : $submission->data[23][0]; // Function
+  if ($submission->data[23][0] == 'Andere') {
+    $post->field_funktion[$post->language][0]['value'] = $submission->data[20][0];
+  }
+  else {
+    module_load_include('inc', 'webform_localization', 'components/select');
+    $funktion_component = $master->webform['components'][23];
+    $function_transl = _translate_select_option($funktion_component, $submission->data[23][0]);
+    $post->field_funktion[$post->language][0]['value'] = $function_transl; // Function
+  }
   $post->field_ort[$post->language][0]['value'] = $submission->data[26][0]; // Ort
   $post = node_submit($post);
   node_save($post);
@@ -288,7 +296,7 @@ function _post_delivery_step_presave(&$step_options, $node, &$submission) {
   }
 }
 
-function get_option_translation($component, $option_string) {
+function _get_option_translation($component, $option_string) {
 
 }
 
@@ -313,6 +321,22 @@ function _set_submission_value($master, $submission, $form_key, $value) {
       break;
     }
   }
+}
+
+function _translate_select_option($component, $option_key) {
+  // Find the source for data value and translate it.
+  $item_key_lookup = _webform_localization_string_to_key($component['extra']['items']);
+  foreach ($component['extra']['translated_strings'] as $name) {
+    $name_list = explode(':', $name);
+    // Translate options.
+    if (strpos($name_list[3], '-') !== FALSE) {
+      list (, $key) = explode('-', $name_list[3]);
+      if (isset($item_key_lookup[$key]) && $option_key == $key) {
+        return i18n_string($name, trim($item_key_lookup[$key]));
+      }
+    }
+  }
+  return $option_key;
 }
 
 
