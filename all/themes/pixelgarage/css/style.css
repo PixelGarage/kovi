@@ -10364,6 +10364,14 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   left: 3px;
   width: 60%;
 }
+.i18n-fr .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
+  width: 85%;
+  bottom: -5px;
+  z-index: 10;
+}
+.i18n-it .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
+  width: 75%;
+}
 .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote img {
   width: 100%;
   height: auto;

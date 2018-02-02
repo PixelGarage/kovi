@@ -288,6 +288,10 @@ function _post_delivery_step_presave(&$step_options, $node, &$submission) {
   }
 }
 
+function get_option_translation($component, $option_string) {
+
+}
+
 /**
  * Helper function to get submission value for given form key.
  */
@@ -414,11 +418,6 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   $img_style_path = $img_style_sw->realpath();
 
   //
-  // get images
-  $path = drupal_get_path('theme', 'pixelgarage') . '/images/';
-  $slogan_img = $path . 'kfK_KOVIweil.png';
-
-  //
   // get strings from post
   $quote = $post->field_quote[$post->language][0]['value'];
   $html_quote = '<span style="color:#ffb119">«</span><span>' . $quote . '</span><span style="color:#ffb119">»</span>';
@@ -486,8 +485,25 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   // draw post image (high-resolution)
   $tcpdf_obj->Image($img_style_path, 2, 2, 106, 106, '', '', '', false, 300, '', false, false, 0, 'CT');
 
+  //
   // draw slogan image
-  $tcpdf_obj->Image($slogan_img, 0, 98, 70, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+  global $language;
+  $path = drupal_get_path('theme', 'pixelgarage') . '/images/';
+  switch ($language->language) {
+    case 'de':
+    default:
+      $slogan_img = $path . 'kfK_KOVIweil.png';
+      $tcpdf_obj->Image($slogan_img, 0, 98, 70, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+      break;
+    case 'fr':
+      $slogan_img = $path . 'kfk_IMRparceque.png';
+      $tcpdf_obj->Image($slogan_img, 4, 100, 0, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+      break;
+    case 'it':
+      $slogan_img = $path . 'kfk_IMRperche.png';
+      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+      break;
+  }
 
   // draw quote
   // Format: MultiCell($w, $h, $txt, $border=0, $align='J', $fill=false, $ln=1, $x='', $y='', $reseth=true, $stretch=0, $ishtml=false, $autopadding=true, $maxh=0, $valign='T', $fitcell=false)

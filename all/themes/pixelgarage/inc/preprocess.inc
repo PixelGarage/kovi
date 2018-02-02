@@ -186,7 +186,10 @@ function _preprocess_node_post(&$vars, $view_mode) {
       $vars['icon_path'] = file_create_url($img_path . 'kfK_KOVIweil.png');
       break;
     case 'fr':
-      $vars['icon_path'] = file_create_url($img_path . 'kfK_KOVIweil.png');
+      $vars['icon_path'] = file_create_url($img_path . 'kfk_IMRparceque.png');
+      break;
+    case 'it':
+      $vars['icon_path'] = file_create_url($img_path . 'kfk_IMRperche.png');
       break;
   }
 
