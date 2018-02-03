@@ -12885,6 +12885,12 @@ body.page-node-1482 .node.node-page.view-mode-default > .row > div.col-sm-12 > .
   line-height: 22px;
 }
 /*
+ *  Node organisation component
+ * --------------------------------------------------*/
+.node.node-page.view-mode-teaser .row .col-sm-12 .firld-name-field-image .field-item img {
+  margin: 0 auto;
+}
+/*
  *  Text paragraph component
  * --------------------------------------------------*/
 .entity-paragraphs-item.paragraphs-item-text-paragraph .row .col-sm-12 .field-name-field-title .field-item {
