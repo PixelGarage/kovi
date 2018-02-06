@@ -10367,10 +10367,11 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .i18n-fr .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
   width: 85%;
-  bottom: -5px;
+  bottom: -6px;
 }
 .i18n-it .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
   width: 75%;
+  bottom: -6px;
 }
 .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote img {
   width: 100%;
