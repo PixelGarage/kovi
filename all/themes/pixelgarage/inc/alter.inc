@@ -446,8 +446,8 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   $quote = $post->field_quote[$post->language][0]['value'];
   $html_quote = '<span style="color:#ffb119">«</span><span>' . $quote . '</span><span style="color:#ffb119">»</span>';
   $quote_len = strlen($quote);
-  $your_name = strtoupper($post->field_your_name[$post->language][0]['value']);
-  $your_name = mb_strimwidth($your_name, 0, 21, "...");
+  $your_name = mb_strtoupper($post->field_your_name[$post->language][0]['value'], 'UTF-8');
+  $your_name = mb_strimwidth($your_name, 0, 25, "...", 'UTF-8');
   $name_len_mm =strlen($your_name)*4;
   $function_location = $post->field_funktion[$post->language][0]['value'];
   $location = $post->field_ort[$post->language][0]['value'];
