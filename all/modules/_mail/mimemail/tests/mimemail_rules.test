@@ -11,10 +11,6 @@
  * Tests the Rules integration.
  */
 class MimeMailRulesTestCase extends DrupalWebTestCase {
-  /**
-   * The user with administration permissions.
-   * @var object
-   */
   protected $adminUser;
 
   public static function getInfo() {
@@ -25,24 +21,23 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
     );
   }
 
-  public function setUp(array $modules = array()) {
-    $modules[] = 'mailsystem';
-    $modules[] = 'locale';
-    $modules[] = 'entity';
-    $modules[] = 'entity_token';
-    $modules[] = 'rules';
-    $modules[] = 'mimemail';
-    parent::setUp($modules);
+  public function setUp() {
+    parent::setUp('mailsystem', 'locale', 'entity', 'entity_token', 'rules', 'mimemail');
 
-    // Create and login user.
-    $this->adminUser = $this->drupalCreateUser(array(
+    $permissions = array(
       'access administration pages',
       'edit mimemail user settings',
       'administer languages',
       'administer rules',
       'bypass rules access',
       'access rules debug',
-    ));
+    );
+
+    // Check to make sure that the array of permissions are valid.
+    $this->checkPermissions($permissions, TRUE);
+
+    // Create and login user.
+    $this->adminUser = $this->drupalCreateUser($permissions);
     $this->drupalLogin($this->adminUser);
 
     // Enable another language too.
@@ -56,11 +51,10 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
     drupal_static_reset('language_list');
   }
 
-
   /**
-   * Create mimemail action rule and fire it.
+   * Create rule with "mimemail" action and fire it.
    */
-  public function testMimemailAction() {
+  public function testMailToUserAction() {
     $settings = array(
       'key' => 'mail-key-' . $this->randomName(),
       'to'  => $this->randomName() . '@example.com',
@@ -69,7 +63,6 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
       'body' => $this->randomName(60) . '<div></div><br /><hr>',
       'plaintext' => $this->randomName(30) . '<div></div><br /><hr>',
     );
-
 
     // Set no language for the mail and check if the system default is used.
     $rule = rule();
@@ -108,12 +101,12 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
   }
 
   /**
-   * Create mimemail to users by role action rule and fire it.
+   * Create rule with "mimemail_to_users_of_role" action and fire it.
    */
-  public function testMimemaiToUsersOfRoleAction() {
+  public function testMailToUsersOfRoleAction() {
     $languages = language_list();
 
-    // Add more uses and roles.
+    // Add more users and roles.
     $users = array(
       $this->randomName() . '@example.com' => 'en',
       $this->randomName() . '@example.com' => 'de',
@@ -121,7 +114,9 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
       $this->randomName() . '@example.com' => '',
       $this->randomName() . '@example.com' => 'invalid',
     );
+
     $mimemail_role = $this->drupalCreateRole(array());
+
     foreach ($users as $email => $language) {
       $user = $this->drupalCreateUser(array(
         'access administration pages',
@@ -131,6 +126,7 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
       $user->roles[$mimemail_role] = $mimemail_role;
       user_save($user);
     }
+
     $settings = array(
       'key' => 'mail-key-' . $this->randomName(),
       'from' => $this->randomName() . '@example.com',
@@ -138,6 +134,7 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
       'body' => $this->randomName(60) . '<div></div><br /><hr>',
       'plaintext' => $this->randomName(30) . '<div></div><br /><hr>',
     );
+
     // Rest the collected mails.
     variable_set('drupal_test_email_collector', array());
 
@@ -171,10 +168,11 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
       $this->assertEqual($mail['language']->language, $user_language);
     }
 
-    // Send mails to all users of a role and respect the language of the users.
-    // Enforce German as fallback language if an user doesn't have a language.
     // Rest the collected mails.
     variable_set('drupal_test_email_collector', array());
+
+    // Send mails to all users of a role and respect the language of the users.
+    // Enforce German as fallback language if an user doesn't have a language.
     $rule->elementMap()->lookup(3)->settings['language'] = 'de';
     $rule->save();
     $rule->execute();
@@ -187,9 +185,10 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
       $this->assertEqual($mail['language']->language, $user_language);
     }
 
-    // Send mails to all users of a role but use the same language for all.
     // Rest the collected mails.
     variable_set('drupal_test_email_collector', array());
+
+    // Send mails to all users of a role but use the same language for all.
     $rule->elementMap()->lookup(3)->settings['language_user'] = FALSE;
     $rule->elementMap()->lookup(3)->settings['language'] = 'it';
     $rule->save();
@@ -199,9 +198,10 @@ class MimeMailRulesTestCase extends DrupalWebTestCase {
       $this->assertEqual($mail['language']->language, 'it');
     }
 
-    // Send mails to all users of a role except deactivated users.
     // Rest the collected mails.
     variable_set('drupal_test_email_collector', array());
+
+    // Send mails to all users of a role except deactivated users.
     // Disable one of the users.
     reset($users);
     $user = user_load_by_mail(key($users));
