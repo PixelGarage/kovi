@@ -357,20 +357,21 @@ header#navbar {
           }
 
           ul.menu.secondary {
-            display: inline-block;
+            display: flex;
             position: absolute;
             #pxl-mixins.center-horizontally();
             bottom: -@pxl-menu-secondary-shift-small;
             width: @container-tablet;
             height: @pxl-menu-secondary-shift-small;
-            padding: @pxl-menu-secondary-margin-small @grid-gutter-width / 2;
+            padding: @pxl-menu-secondary-margin-small 0;
             background-color: @pxl-color-body-bg;
+            justify-content: space-between;
 
             >li {
               display: inline-block;
               margin: 0 -2px;
               padding: 0;
-              width: 33.333333%;
+              max-width: 27%;
 
               >a, >span {
                 padding: 2px 10px 5px;

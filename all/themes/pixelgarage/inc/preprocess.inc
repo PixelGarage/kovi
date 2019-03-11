@@ -51,39 +51,63 @@ function pixelgarage_preprocess_page(&$vars) {
 
   //
   // calculate the different counts
+  $cat_orga = 86;
+  $cat_canton = 87;
   switch ($language->language) {
     case 'de':
     default:
       $organisation = 3474;
+      $canton = 3533;
       $community = 3476;
     break;
     case 'fr':
       $organisation = 3475;
+      $canton = 3534;
       $community = 3477;
-      break;
-    case 'en':
-      $organisation = 3473;
-      $community = 3470;
       break;
     case 'it':
       $organisation = 3508;
+      $canton = 3535;
       $community = 3509;
       break;
   }
   $vars['secondary_nav'][3472]['#title'] .= _get_count('post', $language->language);  // personally
-  $vars['secondary_nav'][$organisation]['#title'] .= _get_count('organisation', $language->language);  // organisations
+  $vars['secondary_nav'][$organisation]['#title'] .= _get_count('organisation', $language->language, $cat_orga);
+  $vars['secondary_nav'][$canton]['#title'] .= _get_count('organisation', $language->language, $cat_canton);
+
+  //__update_categories();
 }
 
-function _get_count($bundle, $lang) {
+function _get_count($bundle, $lang, $category = FALSE) {
   // get the published posts
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
     ->entityCondition('bundle', $bundle)
     ->propertyCondition('status', NODE_PUBLISHED)
     ->propertyCondition('language', array($lang, LANGUAGE_NONE), 'IN');
+  if ($category) {
+    $query->fieldCondition('field_kategorie', 'tid', $category);
+  }
   $result = $query->count()->execute();
 
   return $result ? ' (' . $result  . ')' : ' (0)';
+}
+
+function __update_categories() {
+  $query = new EntityFieldQuery();
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'organisation')
+    ->propertyCondition('status', NODE_PUBLISHED);
+  $result = $query->execute();
+
+  if ($result && !empty($result['node'])) {
+    $nodes = node_load_multiple(array_keys($result['node']));
+    foreach ($nodes as $nid => $node) {
+      $node->field_kategorie[LANGUAGE_NONE][0]['tid'] = 86;
+      node_save($node);
+    }
+  }
+
 }
 
 

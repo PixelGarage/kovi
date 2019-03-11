@@ -1,0 +1,52 @@
+/*
+ *  Text paragraph component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+// Component
+// -------------------------
+.entity-paragraphs-item.paragraphs-item-text-2column {
+  .row {
+    .col-sm-6 {
+      width: 100%;
+
+      @media @normal {
+        width: 50%;
+      }
+
+      .field-name-field-title {
+        .field-item {
+          #pxl-mixins.title();
+        }
+      }
+
+      .field-name-field-column-left,
+      .field-name-field-column-right {
+        .field-item {
+          #pxl-mixins.wysiwyg-body();
+          //#pxl-mixins.hyphenate;
+
+          iframe {
+            padding: 0;
+            border: none;
+          }
+
+          @media @tablet {
+            iframe {
+              min-height: 480px;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
