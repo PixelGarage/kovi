@@ -75,7 +75,6 @@ function pixelgarage_preprocess_page(&$vars) {
   $vars['secondary_nav'][$organisation]['#title'] .= _get_count('organisation', $language->language, $cat_orga);
   $vars['secondary_nav'][$canton]['#title'] .= _get_count('organisation', $language->language, $cat_canton);
 
-  //__update_categories();
 }
 
 function _get_count($bundle, $lang, $category = FALSE) {
