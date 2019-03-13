@@ -255,8 +255,14 @@ header#navbar {
 
       .region-navigation {
         display: inline-block;
+        white-space: nowrap;
         #pxl-mixins.center-xy(absolute);
+        left: 60%;
         .call2action-menu(@pxl-color-active, @pxl-color-main);
+
+        @media @special-break {
+          left: 50%;
+        }
       }
 
       .navbar-toggle {

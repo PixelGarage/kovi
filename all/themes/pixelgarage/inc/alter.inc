@@ -517,15 +517,15 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
     case 'de':
     default:
       $slogan_img = $path . 'kfK_KOVIweil.png';
-      $tcpdf_obj->Image($slogan_img, 0, 98, 70, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
       break;
     case 'fr':
       $slogan_img = $path . 'kfk_IMRparceque.png';
-      $tcpdf_obj->Image($slogan_img, 4, 100, 0, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 11.5, '', '', '', false, 300, '', false, false, 0, 'CT');
       break;
     case 'it':
       $slogan_img = $path . 'kfk_IMRperche.png';
-      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 11.5, '', '', '', false, 300, '', false, false, 0, 'CT');
       break;
   }
 

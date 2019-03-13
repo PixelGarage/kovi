@@ -10453,7 +10453,7 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
   position: absolute;
   bottom: 0;
   left: 3px;
-  width: 60%;
+  width: 70%;
   z-index: 10;
 }
 .i18n-fr .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
@@ -16368,12 +16368,14 @@ header#navbar .navbar-top-container > .container .navbar-header a.logo img {
 }
 header#navbar .navbar-top-container > .container .navbar-header .region-navigation {
   display: inline-block;
+  white-space: nowrap;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  left: 60%;
 }
 header#navbar .navbar-top-container > .container .navbar-header .region-navigation ul.menu {
   display: inline-block;
@@ -16426,6 +16428,11 @@ header#navbar .navbar-top-container > .container .navbar-header .region-navigati
   header#navbar .navbar-top-container > .container .navbar-header .region-navigation ul.menu > li > a,
   header#navbar .navbar-top-container > .container .navbar-header .region-navigation ul.menu > li > span {
     font-size: 24px;
+  }
+}
+@media screen and (min-width: 420px) {
+  header#navbar .navbar-top-container > .container .navbar-header .region-navigation {
+    left: 50%;
   }
 }
 header#navbar .navbar-top-container > .container .navbar-header .navbar-toggle {
