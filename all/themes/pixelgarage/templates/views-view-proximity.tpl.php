@@ -12,11 +12,11 @@
   <div class="stamp stamp1"></div>
 
   <?php foreach ($rows as $id => $row): ?>
-    <?php if (isset($testimonials[$id])): ?>
-      <?php foreach ($testimonials[$id] as $key => $testimonial): ?>
-        <div class="pe-item pe-item-no-link <?php print 'pe-item-' . $key; ?>">
+    <?php if (isset($french_posts[$id])): ?>
+      <?php foreach ($french_posts[$id] as $key => $post): ?>
+        <div class="pe-item pe-item-no-ajax <?php print 'pe-item-' . $key; ?>">
           <div class="pe-item-inner">
-            <?php print render($testimonial); ?>
+            <?php print render($post); ?>
           </div>
         </div>
       <?php endforeach; ?>
@@ -26,6 +26,15 @@
         <div class="pe-item pe-item-no-ajax <?php print 'pe-item-' . $key; ?>">
           <div class="pe-item-inner">
             <?php print render($post); ?>
+          </div>
+        </div>
+      <?php endforeach; ?>
+    <?php endif; ?>
+    <?php if (isset($testimonials[$id])): ?>
+      <?php foreach ($testimonials[$id] as $key => $testimonial): ?>
+        <div class="pe-item pe-item-no-link <?php print 'pe-item-' . $key; ?>">
+          <div class="pe-item-inner">
+            <?php print render($testimonial); ?>
           </div>
         </div>
       <?php endforeach; ?>

@@ -140,6 +140,7 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
 
   //
   // check if a post exists already, and update or create the post accordingly
+  global $language;
   $post_nid = _get_submission_value($master, $submission, 'post_nid');
 
   if ($post_nid) {
@@ -176,6 +177,7 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
     $post->field_funktion[$post->language][0]['value'] = $function_transl; // Function
   }
   $post->field_ort[$post->language][0]['value'] = $submission->data[26][0]; // Ort
+  $post->field_language[$post->language][0]['value'] = $language->language; // Sprache
   $post = node_submit($post);
   node_save($post);
 
@@ -185,12 +187,12 @@ function _post_data_step_presave(&$step_options, $node, &$submission) {
   $step_options['post_status'] = $status;
 
   //
-  // add related post id to submission
+  // add related post id and language to submission (hidden)
   _set_submission_value($master, $submission, 'post_nid', $post->nid);
+  _set_submission_value($master, $submission, 'language', $language->language);
 
   //
   // create postcard and high resolution image and add it to post node, if available
-  global $language;
   $pdf_name = $language->language . '_' . $post->title . '_' . time() . '.pdf';
   $options = array(
     'post_node' => $post,

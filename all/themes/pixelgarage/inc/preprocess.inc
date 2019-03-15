@@ -92,23 +92,24 @@ function _get_count($bundle, $lang, $category = FALSE) {
   return $result ? ' (' . $result  . ')' : ' (0)';
 }
 
-function __update_categories() {
+/*
+function __update_language() {
+  $nids = [2035, 2036, 1932, 1606, 2012, 1984, 2118, 1746, 1951, 2005, 1954, 2079, 2096, 2085, 2130, 1830, 1926, 1927, 1959, 1963, 2014, 2119, 2030, 2024, 1985, 1968, 1854, 2016, 2002, 1923, 1825, 1938, 1961, 1969, 2004, 1930, 1974, 1941, 2020, 1569];
+
   $query = new EntityFieldQuery();
   $query->entityCondition('entity_type', 'node')
-    ->entityCondition('bundle', 'organisation')
+    ->entityCondition('bundle', 'post')
     ->propertyCondition('status', NODE_PUBLISHED);
   $result = $query->execute();
-
   if ($result && !empty($result['node'])) {
     $nodes = node_load_multiple(array_keys($result['node']));
     foreach ($nodes as $nid => $node) {
-      $node->field_kategorie[LANGUAGE_NONE][0]['tid'] = 86;
+      $node->field_language[LANGUAGE_NONE][0]['value'] = in_array($nid, $nids) ? 'fr' : 'de';
       node_save($node);
     }
   }
-
 }
-
+*/
 
 /* =============================================================================
  *      Front Masonry
@@ -127,6 +128,8 @@ function pixelgarage_preprocess_views_view_proximity (&$vars) {
   // add important person at specific position
   $vars['important_posts'] = _random_nodes_of_bundle('post');
 
+  // add french person at specific position (to show multilingual aspect)
+  $vars['french_posts'] = _random_nodes_of_bundle('post-french');
 }
 
 function _random_nodes_of_bundle($bundle) {
@@ -138,7 +141,7 @@ function _random_nodes_of_bundle($bundle) {
     // get the published testimonials
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', $bundle)
+      ->entityCondition('bundle', 'testimonial')
       ->propertyCondition('status', NODE_PUBLISHED)
       ->propertyCondition('language', array($lang, LANGUAGE_NONE), 'IN');
     $result = $query->execute();
@@ -146,9 +149,17 @@ function _random_nodes_of_bundle($bundle) {
   else if ($bundle == 'post') {
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'node')
-      ->entityCondition('bundle', $bundle)
+      ->entityCondition('bundle', 'post')
       ->propertyCondition('status', NODE_PUBLISHED)
       ->fieldCondition('field_important', 'value', '1');
+    $result = $query->execute();
+  }
+  else if ($bundle == 'post-french') {
+    $query = new EntityFieldQuery();
+    $query->entityCondition('entity_type', 'node')
+      ->entityCondition('bundle', 'post')
+      ->propertyCondition('status', NODE_PUBLISHED)
+      ->fieldCondition('field_language', 'value', 'fr');
     $result = $query->execute();
   }
   if ($result && !empty($result['node'])) {
@@ -158,7 +169,7 @@ function _random_nodes_of_bundle($bundle) {
 
   // return a random node list
   $rand_key = array_rand($nodes, 1);
-  $pos = ($bundle == 'testimonial') ? 4 : 2;
+  $pos = ($bundle == 'testimonial') ? 3 : 1;
   return array(
     $pos => array($rand_key => node_view($nodes[$rand_key], 'teaser'))
   );
