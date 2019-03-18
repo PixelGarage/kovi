@@ -50,7 +50,12 @@ function pixelgarage_preprocess_page(&$vars) {
   }
 
   //
-  // calculate the different counts
+  // adapt primary menu
+  $vars['search_block'] = $vars['primary_nav'][3469];
+  unset($vars['primary_nav'][3469]);
+
+  //
+  // calculate the different counts for secondary menu
   $cat_orga = 86;
   $cat_canton = 87;
   switch ($language->language) {

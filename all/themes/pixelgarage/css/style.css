@@ -10251,7 +10251,7 @@ ul.language-switcher-locale-url > li {
   margin: 0;
   padding: 0;
   display: inline-block;
-  margin: 0 -2px;
+  margin-left: -2px;
 }
 ul.language-switcher-locale-url > li a.language-link {
   display: inline-block;
@@ -16457,7 +16457,7 @@ header#navbar .navbar-top-container > .container .navbar-collapse {
   overflow: auto;
   padding: 10px 0;
   height: auto;
-  max-height: 280px;
+  max-height: 100vh;
   background: none;
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav {
@@ -16469,7 +16469,6 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  line-height: 1;
   text-align: center;
   background: none;
 }
@@ -16477,7 +16476,6 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   display: block;
   float: none;
   padding: 5px 20px;
-  line-height: 1;
 }
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li > a,
 header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > li > span {
@@ -16486,7 +16484,6 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   padding: 0;
   font-family: 'OpenSansRegular', sans-serif;
   font-size: 24px;
-  line-height: 1;
   text-transform: lowercase;
   color: #103c55;
   outline: none;
@@ -16618,19 +16615,22 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu:first-child {
     position: absolute;
-    bottom: 10px;
-    right: 30px;
+    top: 5px;
+    right: 120px;
     padding: 0;
-    width: 40%;
+    width: 75%;
     text-align: right;
+    z-index: 100;
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu:first-child > li {
-    padding: 0;
+    display: inline-block;
+    padding: 0 5px;
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu:first-child > li > a,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu:first-child > li > span {
-    padding: 3px 0;
-    font-size: 16px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.secondary {
     display: flex;
@@ -16672,11 +16672,23 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
     color: #103c55;
     letter-spacing: normal;
   }
+  header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.menu-search {
+    display: inline-block;
+    position: absolute;
+    bottom: 29px;
+    right: 30px;
+    padding: 0;
+    text-align: right;
+  }
+  header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.menu-search > li {
+    display: inline-block;
+    padding: 0;
+  }
 }
 @media screen and (min-width: 64em) {
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu:first-child > li > a,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu:first-child > li > span {
-    font-size: 20px;
+    font-size: 18px;
   }
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.secondary {
     width: 970px;
@@ -16687,6 +16699,9 @@ header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu > 
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.secondary > li > a,
   header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.secondary > li > span {
     font-size: 20px;
+  }
+  header#navbar .navbar-top-container > .container .navbar-collapse nav ul.menu.menu-search {
+    bottom: 36px;
   }
 }
 @media screen and (min-width: 80em) {

@@ -107,7 +107,7 @@
         <?php endif; ?>
       </div>
 
-      <?php if (!empty($primary_nav) || !empty($secondary_nav)): ?>
+      <?php if (!empty($primary_nav) || !empty($secondary_nav) || isset($search_block)): ?>
         <div class="navbar-collapse collapse">
           <nav role="navigation">
             <?php if (!empty($primary_nav)): ?>
@@ -115,6 +115,11 @@
             <?php endif; ?>
             <?php if (!empty($secondary_nav)): ?>
               <?php print render($secondary_nav); ?>
+            <?php endif; ?>
+            <?php if (isset($search_block)): ?>
+              <ul class="menu menu-search">
+                <?php print render($search_block); ?>
+              </ul>
             <?php endif; ?>
           </nav>
         </div>
