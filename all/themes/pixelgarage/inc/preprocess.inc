@@ -187,9 +187,14 @@ function _random_nodes_of_bundle($bundle) {
 
 function pixelgarage_ds_pre_render_alter(&$layout_render_array, $context, &$vars) {
   // check node type
-  if ($context['entity_type'] == 'node' && $context['bundle'] == 'post') {
-    $view_mode = $context['view_mode'];
+  if ($context['entity_type'] != 'node') return;
+
+  $view_mode = $context['view_mode'];
+  if ($context['bundle'] == 'post') {
     _preprocess_node_post($vars, $view_mode);
+  }
+  else if ($context['bundle'] == 'event') {
+    _preprocess_node_event($vars, $view_mode);
   }
 }
 
@@ -245,6 +250,20 @@ function _preprocess_node_post(&$vars, $view_mode) {
   }
   else {
     $vars['field_funktion_ort'] .= (isset($field_ort) ? $field_ort : '');
+  }
+}
+
+function _preprocess_node_event(&$vars, $view_mode) {
+  //
+  // set variables
+  $content = $vars['content'];
+  $vars['field_date_location'] = isset($content['field_full_date'][0]['#markup']) ? $content['field_full_date'][0]['#markup'] : '';
+  $field_ort = isset($content['field_ort'][0]['#markup']) ? $content['field_ort'][0]['#markup'] : '';
+  if ($vars['field_date_location']) {
+    $vars['field_date_location'] .= (isset($field_ort) ? ' | ' . $field_ort : '');
+  }
+  else {
+    $vars['field_date_location'] .= (isset($field_ort) ? $field_ort : '');
   }
 }
 

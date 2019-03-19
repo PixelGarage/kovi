@@ -1,0 +1,239 @@
+/*
+ *  Node event component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+@pxl-offset-name: 8px;
+@full-max-width: 350px;
+@full-node-break: ~"screen and (min-width: @{full-max-width})";
+
+
+// Mixins
+// -------------------------
+
+.resp-font-size(@font-size) {
+  font-size: unit(@font-size*4/12.8, vw);
+
+  @media @narrow {
+    font-size: unit(@font-size*2/12.8, vw);
+  }
+  @media @tablet {
+    font-size: @font-size*7.68/12.8*1.333;
+  }
+  @media @normal {
+    font-size: @font-size*10.24/12.8*1.333;
+  }
+  @media @wide {
+    font-size: @font-size;
+  }
+}
+
+.resp-font-size-full(@font-size) {
+  font-size: unit(@font-size*3.5/12.8, vw);
+
+  @media @full-node-break {
+    font-size: @font-size;
+  }
+}
+
+
+// General settings
+// -------------------------
+//
+// Node Event
+.node-event.view-mode-teaser {
+  div.row {
+    margin: 0;
+
+    div.col-sm-12 {
+      padding: 0;
+
+      .image-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        .field-name-field-image {
+          .field-item {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+
+        .field-name-field-short-title {
+          display: inline-block;
+          position: absolute;
+          max-width: 95%;
+          top: -@pxl-offset-name;
+          left: -@pxl-offset-name;
+          padding: 5px;
+          border: 1.5px solid @pxl-color-secondary;
+          background: white;
+
+          .field-item {
+            overflow: hidden;
+            font-family: @pxl-text-font-medium;
+            .resp-font-size(18px);
+            color: @pxl-color-black;
+            white-space: nowrap;
+            text-transform: uppercase;
+            text-overflow: ellipsis;
+            line-height: 1;
+          }
+        }
+      }
+
+      .quote-wrapper {
+        position: relative;
+        margin: 0;
+        padding-bottom: 66.6666666%;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background-color: @pxl-color-main;
+
+        .field-name-field-quote {
+          position: absolute;
+          top: 10%;
+          left: 0;
+          right: 0;
+          padding: 0 5%;
+
+          .field-items {
+            .field-item {
+              display: inline-block;
+              margin: 0 auto;
+              font-family: @pxl-text-font;
+              text-align: left;
+              color: white;
+              line-height: 1.1;
+              //#pxl-mixins.hyphenate(auto);
+
+              &.font-size-xs { // greater 90 letters
+                .resp-font-size(18px);
+              }
+              &.font-size-sm { // up to 90 letters
+                .resp-font-size(21px);
+              }
+              &.font-size-md { // up to 60 letters
+                .resp-font-size(24px);
+              }
+              &.font-size-lg { // up to 30 letters
+                .resp-font-size(30px);
+              }
+              &.font-size-xl { // up to 20 letters
+                .resp-font-size(36px);
+              }
+              &.font-size-xxl { // up to 10 letters
+                .resp-font-size(44px);
+              }
+
+              &:before {
+                content: '«';
+                color: @pxl-color-secondary;
+              }
+              &:after {
+                content: '»';
+                color: @pxl-color-secondary;
+              }
+            }
+          }
+        }
+
+        .field-date-location {
+          position: absolute;
+          bottom: 5%;
+          left: 0;
+          right: 0;
+          padding: 0 5%;
+          font-family: @pxl-text-font;
+          .resp-font-size(15px);
+          text-align: left;
+          color: @pxl-color-secondary;
+        }
+      }
+    }
+  }
+
+}
+
+//
+// Full mode post
+//
+.node-event.view-mode-full {
+  margin: 30px auto 50px;
+
+  div.row {
+    display: block;
+
+    @media @tablet {
+      display: flex;
+    }
+
+    div.col-sm-6 {
+      margin: 30px auto;
+
+      .field-name-field-image {
+        .field-item {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      .field-name-title {
+        .field-item {
+          h2 {
+            margin: 0 0 30px;
+            #pxl-mixins.title();
+          }
+        }
+      }
+
+      .field-name-field-full-date {
+        margin: 0 0 10px;
+        .field-item {
+          #pxl-mixins.text();
+          font-weight: bold;
+        }
+      }
+
+      .field-name-field-address {
+        margin: 0 0 30px;
+        .field-item {
+          #pxl-mixins.text();
+          font-weight: bold;
+        }
+      }
+
+      .field-name-body {
+        margin: 0 0 15px;
+        .field-item {
+          #pxl-mixins.wysiwyg-body();
+        }
+      }
+
+      .field-name-field-datei {
+        .field-item {
+          a {
+            color: @link-color;
+            text-decoration: @link-decoration;
+
+            &:hover, &:focus {
+              color: @link-color-hover;
+              text-decoration: @link-decoration-hover;
+              background: none;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
+

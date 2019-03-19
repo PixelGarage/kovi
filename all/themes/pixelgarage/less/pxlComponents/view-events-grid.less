@@ -1,0 +1,59 @@
+/*
+ *  Events view component
+ * --------------------------------------------------*/
+
+// Variables
+// -------------------------
+
+
+// Mixins
+// -------------------------
+
+
+
+// General settings
+// -------------------------
+.view-events-grid {
+  margin: 0 auto;
+  width: 100%;
+
+  .view-content {
+    .masonry();
+  }
+
+  //
+  // view pager
+  #pxl-mixins.view-pager(18px, @text-color, @text-color);
+
+  ul.pagination {
+    li {
+      &:hover, &:focus, &.active {
+        a, span {
+          font-family: @pxl-text-font-bold;
+          text-decoration: none;
+          font-size: 20px;
+          background: none;
+        }
+      }
+
+      &.pager-first,
+      &.pager-last,
+      &.prev, &.pager-previous,
+      &.next, &.pager-next {
+        &:hover, &:focus, &.active {
+          a, span {
+            font-family: @pxl-text-font;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  //
+  // infinite scrolling pager
+  .pager.pager--infinite-scroll {
+    .infinite-scroll-button();
+  }
+}
+

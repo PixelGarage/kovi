@@ -106,7 +106,7 @@
    */
   Drupal.behaviors.defineTextSize = {
     attach: function () {
-      var $items = $('.node.node-post'),
+      var $items = $('.node.node-post').add('.node.node-event'),
         $quotes = $items.find('.field-name-field-quote .field-item');
 
       $quotes.each(function() {
@@ -147,12 +147,19 @@
   Drupal.behaviors.fullSizeClickableItems = {
     attach: function () {
       var $clickablePosts = $('.view-post-grid .pe-item-no-ajax'),
+        $clickableEvents = $('.view-events-grid .pe-item-no-ajax'),
         $clickableTestimonials = $('.view-post-grid .pe-item-no-link'),
         $clickableOrgas = $('.view-organisations .pe-item');
 
       $clickablePosts.once('click', function () {
         $(this).on('click', function () {
           window.location = $(this).find(".node-post .field-name-field-image a").attr("href");
+          return false;
+        });
+      });
+      $clickableEvents.once('click', function () {
+        $(this).on('click', function () {
+          window.location = $(this).find(".node-event .field-name-field-image a").attr("href");
           return false;
         });
       });
