@@ -374,10 +374,12 @@ function webform_localization_translate_strings(&$node, $update = FALSE) {
       $confirmationOptions['format'] = $node->webform['preview_message_format'];
     }
     else {
+      /*
       drupal_set_message(t('The string @name could not be refreshed with the text format @format because it is not allowed for translation.', array(
         '@name' => $name,
         '@format' => $node->webform['preview_message_format']
       )), 'warning', FALSE);
+      */
     }
   }
   $node->webform['preview_message'] = i18n_string(
