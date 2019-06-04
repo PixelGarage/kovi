@@ -10451,17 +10451,17 @@ body.desktop .node-post-page-wrapper .node-post-header .social-buttons .shariff 
 }
 .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
   position: absolute;
-  bottom: 0;
-  left: 3px;
-  width: 70%;
+  bottom: -6px;
+  left: 10px;
+  width: 90%;
   z-index: 10;
 }
 .i18n-fr .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
-  width: 85%;
+  width: 90%;
   bottom: -6px;
 }
 .i18n-it .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote {
-  width: 75%;
+  width: 90%;
   bottom: -6px;
 }
 .node.node-post div.row div.col-sm-12 .image-wrapper .icon-quote img {

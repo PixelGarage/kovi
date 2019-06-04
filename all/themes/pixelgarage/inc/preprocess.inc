@@ -227,13 +227,13 @@ function _preprocess_node_post(&$vars, $view_mode) {
   switch ($language->language) {
     case 'de':
     default:
-      $vars['icon_path'] = file_create_url($img_path . 'kfK_KOVIweil.png');
+      $vars['icon_path'] = file_create_url($img_path . 'KOVI_weil_de.png');
       break;
     case 'fr':
-      $vars['icon_path'] = file_create_url($img_path . 'kfk_IMRparceque.png');
+      $vars['icon_path'] = file_create_url($img_path . 'KOVI_weil_fr.png');
       break;
     case 'it':
-      $vars['icon_path'] = file_create_url($img_path . 'kfk_IMRperche.png');
+      $vars['icon_path'] = file_create_url($img_path . 'KOVI_weil_it.png');
       break;
   }
 

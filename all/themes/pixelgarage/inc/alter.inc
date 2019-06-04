@@ -399,7 +399,8 @@ function pixelgarage_mail_alter(&$message) {
 /**
  * Allows to draw to a fully initialised pdf. Only the postcard itself has to be drawn here.
  * The initialisation and storage of the TCPDF object is done in the postcard_create_pdf() function.
- * (See https://tcpdf.org for more details about PDF creation.)
+ * (See https://tcpdf.org for more details about PDF creation or
+ * read documentation https://www.scripps.edu/includes/tcpdf/doc/index.html.)
  *
  * Additionally the PDF postcard can be converted (ImageMagick need to be installed) to a high resolution image,
  * if an image file path with an image type extension is returned.
@@ -518,16 +519,16 @@ function pixelgarage_postcard_draw_pdf_alter(&$tcpdf_obj, &$pdf_uri, &$options) 
   switch ($language->language) {
     case 'de':
     default:
-      $slogan_img = $path . 'kfK_KOVIweil.png';
-      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 10, '', '', '', false, 300, '', false, false, 0, 'CT');
+      $slogan_img = $path . 'KOVI_weil_de.png';
+      $tcpdf_obj->Image($slogan_img, 7, 93, 94, 0, '', '', '', false, 300, '', false, false, 0, 'CT');
       break;
     case 'fr':
-      $slogan_img = $path . 'kfk_IMRparceque.png';
-      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 11.5, '', '', '', false, 300, '', false, false, 0, 'CT');
+      $slogan_img = $path . 'KOVI_weil_fr.png';
+      $tcpdf_obj->Image($slogan_img, 7, 93, 94, 0, '', '', '', false, 300, '', false, false, 0, 'CT');
       break;
     case 'it':
-      $slogan_img = $path . 'kfk_IMRperche.png';
-      $tcpdf_obj->Image($slogan_img, 4, 98, 0, 11.5, '', '', '', false, 300, '', false, false, 0, 'CT');
+      $slogan_img = $path . 'KOVI_weil_it.png';
+      $tcpdf_obj->Image($slogan_img, 7, 93, 94, 0, '', '', '', false, 300, '', false, false, 0, 'CT');
       break;
   }
 
